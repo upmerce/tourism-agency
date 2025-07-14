@@ -7,12 +7,13 @@ import { adminDb as adminDbReview } from '@/lib/firebase-admin';
 import { revalidatePath } from 'next/cache';
 
 // This function handles approving a review
+type Params = Promise<{ id: string }>;
 export async function PUT(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Params }
 ) {
   try {
-    const { id } = params;
+    const { id } = await params;
     const { isApproved } = await request.json();
 
     if (!id || typeof isApproved !== 'boolean') {
@@ -37,12 +38,13 @@ export async function PUT(
 }
 
 // This function handles deleting a review
+type DeleteParams = Promise<{ id: string }>;
 export async function DELETE(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: DeleteParams }
 ) {
     try {
-        const { id } = params;
+        const { id } = await params;
         if (!id) {
             return NextUpdateResponse.json({ error: 'Review ID is required' }, { status: 400 });
         }

@@ -7,12 +7,14 @@ import { adminDb } from '@/lib/firebase-admin';
 // We cache for a shorter time than experiences, as reviews might change more often.
 export const revalidate = 900; 
 
+type Params = Promise<{ experienceId: string }>;
 export async function GET(
   request: Request,
-  { params }: { params: { experienceId: string } }
+  { params }: { params: Params }
 ) {
+  const { experienceId } = await params;
   try {
-    const { experienceId } = params;
+    
 
     if (!experienceId) {
       return NextResponse.json({ message: 'Experience ID is missing' }, { status: 400 });
@@ -48,7 +50,7 @@ export async function GET(
     return NextResponse.json({ reviews }, { status: 200 });
 
   } catch (error) {
-    console.error(`Error fetching reviews for experienceId: ${params?.experienceId}`, error);
+    console.error(`Error fetching reviews for experienceId: ${experienceId}`, error);
     return NextResponse.json({ message: 'Failed to fetch reviews' }, { status: 500 });
   }
 }

@@ -7,9 +7,10 @@ import { revalidatePath } from 'next/cache';
 import { getStorage } from 'firebase-admin/storage';
 
 // The PUT function is for updating existing experiences
+type Params = Promise<{ id: string }>;
 export async function PUT(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Params }
 ) {
   try {
     const { id } = await params;
@@ -49,12 +50,13 @@ export async function PUT(
 
 
 // The DELETE function removes an experience and its associated storage files
+type DeleteParams = Promise<{ id: string }>;
 export async function DELETE(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: DeleteParams }
 ) {
   try {
-    const { id } = params;
+    const { id } = await params;
     if (!id) {
       return NextResponse.json({ message: 'Experience ID is required' }, { status: 400 });
     }

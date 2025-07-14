@@ -8,9 +8,10 @@ import { FieldValue } from 'firebase-admin/firestore';
 import { getStorage } from 'firebase-admin/storage';
 import { revalidatePath } from 'next/cache';
 
-export async function PUT(request: Request, { params }: { params: { id: string } }) {
+type Params = Promise<{ id: string }>;
+export async function PUT(request: Request, { params }: { params: Params }) {
   try {
-    const { id } = params;
+    const { id } = await params;
     const body = await request.json();
     const { slug, status, translations } = body;
     if (!id || !slug || !status || !translations?.en?.title) {
@@ -33,9 +34,10 @@ export async function PUT(request: Request, { params }: { params: { id: string }
   }
 }
 
-export async function DELETE(request: Request, { params }: { params: { id: string } }) {
+type DeleteParams = Promise<{ id: string }>;
+export async function DELETE(request: Request, { params }: { params: DeleteParams }) {
   try {
-    const { id } = params;
+    const { id } = await params;
     if (!id) {
       return NextResponse.json({ error: 'Article ID is required' }, { status: 400 });
     }

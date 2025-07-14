@@ -17,8 +17,8 @@ import StickyBookingWidget from '@/components/booking/StickyBookingWidget';
 import Inclusions from '@/components/experience/Inclusions';
 import Itinerary from '@/components/experience/Itinerary';
 import ImageGallery from '../experience/ImageGallery';
-import { GalleryImage } from '@/hooks/useExperienceForm';
 import ResponsiveHeading from '../custom/ResponsiveHeading';
+import { GalleryImage } from '@/types/experience';
 
 // This is the full, detailed interface for an experience object
 interface Experience {

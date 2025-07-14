@@ -28,8 +28,11 @@ async function getArticle(slug: string) {
 }
 
 // --- DYNAMIC SEO METADATA FUNCTION ---
-export async function generateMetadata({ params }: { params: { slug: string, locale: string } }): Promise<Metadata> {
-  const article = await getArticle(params.slug);
+type metaParams = Promise<{ slug: string, locale: string }>;
+
+export async function generateMetadata({ params }: { params: metaParams }): Promise<Metadata> {
+  const { slug, locale } = await params;
+  const article = await getArticle(slug);
   
   if (!article) {
     return {
@@ -37,7 +40,7 @@ export async function generateMetadata({ params }: { params: { slug: string, loc
     };
   }
 
-  const translation = article.translations?.[params.locale] || article.translations?.en;
+  const translation = article.translations?.[locale] || article.translations?.en;
   const description = translation?.content?.substring(0, 160) + '...';
 
   return {
@@ -46,15 +49,17 @@ export async function generateMetadata({ params }: { params: { slug: string, loc
   };
 }
 
-export default async function ArticlePage({ params }: { params: { slug: string, locale: string } }) {
-  const article = await getArticle(params.slug);
+type Params = Promise<{ slug: string, locale: string }>;
+export default async function ArticlePage({ params }: { params: Params }) {
+  const { slug, locale } = await params;
+  const article = await getArticle(slug);
 
   if (!article) {
     notFound();
   }
 
-  const translation = article.translations?.[params.locale] || article.translations?.en;
-  const formattedDate = new Date(article.createdAt).toLocaleDateString(params.locale, {
+  const translation = article.translations?.[locale] || article.translations?.en;
+  const formattedDate = new Date(article.createdAt).toLocaleDateString(locale, {
     year: 'numeric',
     month: 'long',
     day: 'numeric',

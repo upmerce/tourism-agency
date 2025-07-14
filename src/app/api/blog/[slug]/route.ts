@@ -6,13 +6,14 @@ import { NextResponse } from 'next/server';
 import { adminDb } from '@/lib/firebase-admin';
 
 export const revalidate = 3600; // Cache for 1 hour
+type Params = Promise<{ slug: string }>;
 
 export async function GET(
   request: Request,
-  { params }: { params: { slug: string } }
+  { params }: { params: Params }
 ) {
   try {
-    const { slug } = params;
+    const { slug } = await params;
 
     if (!slug) {
       return NextResponse.json({ error: 'Article slug is required' }, { status: 400 });

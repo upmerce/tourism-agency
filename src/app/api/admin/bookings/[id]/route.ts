@@ -7,12 +7,13 @@ import { adminDb } from '@/lib/firebase-admin';
 import { FieldValue } from 'firebase-admin/firestore';
 import { revalidatePath } from 'next/cache';
 
+type Params = Promise<{ id: string }>;
 export async function PUT(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Params }
 ) {
   try {
-    const { id } = params;
+    const { id } = await params;
     const { status } = await request.json();
 
     if (!id || !status) {

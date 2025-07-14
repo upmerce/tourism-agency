@@ -30,9 +30,9 @@ async function getExperienceDetails(id: string) {
   }
   return res.json();
 }
-
-export default async function ExperienceDetailPage({ params }: { params: { id: string, locale: string } }) {
-  const { id, locale } = params;
+type Params = Promise<{ id: string, locale: string }>;
+export default async function ExperienceDetailPage({ params }: { params: Params }) {
+  const { id, locale } = await params;
   const experienceData = (await getExperienceDetails(id)).experience;
   const clientConfig = await getClientConfig();
   

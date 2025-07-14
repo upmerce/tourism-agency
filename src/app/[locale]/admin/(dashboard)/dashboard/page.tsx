@@ -51,8 +51,11 @@ async function getExperiences(locale: string) {
 }
 
 // The page component is async
-export default async function DashboardPage({ params }: { params: { locale: string } }) {
-  const experiences = await getExperiences(params.locale);
+type Params = Promise<{ locale: string }>;
+export default async function DashboardPage({ params }: { params: Params }) {
+  // Await the params to get the locale
+  const { locale } = await params;
+  const experiences = await getExperiences(locale);
 
   return (
     <Box>

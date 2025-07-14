@@ -28,7 +28,9 @@ async function getPublishedArticles() {
 }
 
 // --- SEO METADATA FUNCTION ---
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+type Params = Promise<{ locale: string }>;
+export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'BlogPage' });
  
   return {
