@@ -1,26 +1,19 @@
-@import "tailwindcss";
+/* /src/app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  This ensures that padding and borders are included
+  in the element's total width and height, which
+  prevents many common overflow issues.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* We don't need to set body background/color here
+   because our MUI ThemeProvider in layout.tsx handles it. */

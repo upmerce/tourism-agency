@@ -1,0 +1,211 @@
+{
+  "Header": {
+    "siteTitle": "Souss-Massa Tours",
+    "experiences": "Experiences",
+    "about": "About",
+    "contact": "Contact",
+    "blogLink": "Blog",
+    "mobileMenuTitle": "Menu",
+    "allExperiences": "View All Experiences",
+    "login": "Log In"
+  },
+  "HeroSection": {
+    "title": "Discover the Soul of Morocco",
+    "subtitle": "Authentic journeys through the stunning landscapes and rich culture of the Souss-Massa region.",
+    "button": "Explore Our Tours"
+  },
+  "FeaturedExperiences": {
+    "title": "Featured Experiences",
+    "genericError": "An error occurred while loading experiences."
+  },
+  "WhyChooseUs": {
+    "title": "Why Travel With Us?",
+    "feature1_title": "Expert Local Guides",
+    "feature1_desc": "Our guides are born and raised in Morocco, offering you unparalleled insight and access to authentic experiences.",
+    "feature2_title": "Bespoke Itineraries",
+    "feature2_desc": "We don't do 'one-size-fits-all'. Every trip is crafted around your interests, budget, and travel style.",
+    "feature3_title": "24/7 On-Trip Support",
+    "feature3_desc": "Travel with complete peace of mind. Our team is available around the clock to ensure your journey is seamless."
+  },
+    "AboutSection": {
+    "title": "Our Story",
+    "subtitle": "More than just tours, we offer genuine connections to the heart of Morocco.",
+    "paragraph1": "Founded by local experts with a passion for sharing the authentic beauty of the Souss-Massa region, our mission is to create unforgettable travel memories. We believe in responsible tourism that supports local communities and showcases the rich culture and stunning landscapes of our home.",
+    "paragraph2": "From the majestic peaks of the Atlas Mountains to the serene sands of the Sahara, every journey with us is more than a vacation—it's an adventure woven with genuine human connection.",
+    "imageAlt": "A vibrant scene of a traditional Moroccan tagine being prepared.",
+    "valuesTitle": "Our Core Values",
+    "valuesSubtitle": "These principles guide every journey we craft, ensuring an experience that is authentic, respectful, and unforgettable.",
+    "value1_title": "Authenticity",
+    "value1_desc": "We connect you with real people and places, offering a true taste of Moroccan life beyond the typical tourist trails.",
+    "value2_title": "Respect",
+    "value2_desc": "Our tours are designed to honor local traditions, support communities, and preserve the delicate environment we explore.",
+    "value3_title": "Passion",
+    "value3_desc": "We love what we do. Our passion for Morocco's culture and landscapes is the magic ingredient in every trip we plan.",
+    "teamTitle": "Meet Our Expert Guides",
+    "teamSubtitle": "Our team is our greatest asset. They are local experts, storytellers, and your personal connection to the authentic heart of Morocco.",
+    "team1_name": "Hassan Al-Fassi",
+    "team1_title": "Lead Mountain Guide",
+    "team1_bio": "Born in the Atlas Mountains, Hassan has been guiding treks for over 15 years. His knowledge of the local trails and Berber culture is second to none.",
+    "team2_name": "Fatima Zahra",
+    "team2_title": "Cultural & Culinary Expert",
+    "team2_bio": "Fatima shares her passion for Moroccan cuisine and history, leading our city tours and cooking classes with warmth and expertise.",
+    "team3_name": "Youssef Adnani",
+    "team3_title": "Sahara Desert Specialist",
+    "team3_bio": "From a nomadic family, Youssef knows the desert like the back of his hand. He leads our 4x4 and camel trekking adventures.",
+    "ctaTitle": "Ready to Start Your Adventure?",
+    "ctaButton": "Contact Us to Plan Your Trip"
+  },
+  "ExperienceCard": {
+    "learnMoreButton": "Learn More"
+  },
+ "ExperienceDetails": {
+    "inquireButton": "Request to Book",
+    "includedTitle": "What's Included",
+    "notIncludedTitle": "What's Not Included",
+    "importantInfoTitle": "Important Information",
+    "itineraryTitle": "Detailed Itinerary" 
+  },
+ "ExperienceFilters": {
+    "locationLabel": "Filter by Location",
+    "allLocations": "All Locations",
+    "sortLabel": "Sort By",
+    "sortDefault": "Default",
+    "sortPriceAsc": "Price: Low to High",
+    "sortPriceDesc": "Price: High to Low"
+  },
+  "ExperiencesPage": {
+    "title": "Our Adventures",
+    "subtitle": "Browse our complete collection of curated tours and authentic experiences across the beautiful Souss-Massa region.",
+    "noResults": "No experiences match your current filter. Please try another selection."
+  },
+  "ContactSection": {
+    "title": "Get In Touch",
+    "infoTitle": "Contact Information",
+    "infoSubtitle": "Have questions or ready to plan your adventure? Reach out to us! We're here to help you craft the perfect Moroccan journey.",
+    "address": "Biougra, Souss-Massa, Morocco",
+    "phone": "+212 123 456 789",
+    "email": "contact@souss-massatours.com",
+    "formNameLabel": "Your Name",
+    "formEmailLabel": "Your Email",
+    "formMessageLabel": "Your Message",
+    "formSubmitButton": "Send Message",
+    "alertSuccess": "Thank you for your message! We will get back to you shortly."
+  },
+  "Footer": {
+    "siteTitle": "Souss-Massa Tours",
+    "aboutText": "Crafting authentic, unforgettable journeys through the heart of Morocco. Discover the real Souss-Massa region with local experts.",
+    "linksTitle": "Quick Links",
+    "aboutLink": "About Us",
+    "experiencesLink": "Experiences",
+    "contactLink": "Contact Us",
+    "blogLink": "Blog", 
+    "contactTitle": "Contact",
+    "address": "Biougra, Souss-Massa, Morocco",
+    "phone": "+212 123 456 789",
+    "email": "contact@souss-massatours.com",
+    "socialTitle": "Follow Us",
+    "copyright": "© {year} Souss-Massa Tours. All Rights Reserved."
+  }
+  ,
+  "LoginForm": {
+    "title": "Admin Login",
+    "emailLabel": "Email Address",
+    "passwordLabel": "Password",
+    "submitButton": "Log In",
+    "loadingButton": "Logging in...",
+    "error": "Failed to log in. Please check your credentials."
+  },
+  "LogOutButton": {
+    "buttonText": "Log Out",
+    "alertError": "Failed to log out."
+  },
+  "ExperienceForm": {
+    "createButton": "Add New Experience",
+    "createDialogTitle": "Create a New Experience",
+    "editDialogTitle": "Edit Experience",
+    "titleLabel": "Title",
+    "descriptionLabel": "Description",
+    "priceLabel": "Price (e.g., 'From 950 MAD')",
+    "locationLabel": "Location",
+    "uploadButton": "Upload Cover Image",
+    "uploadButtonOptional": "Upload New Cover Image (Optional)",
+    "currentImageUrlLabel": "Current Cover Image URL",
+    "fileSelected": "Selected: {fileName}",
+    "errorMissingImage": "Please select a cover image to upload.",
+    "cancelButton": "Cancel",
+    "submitButtonCreate": "Create Experience",
+    "loadingButtonCreate": "Uploading {progress}%",
+    "submitButtonEdit": "Save Changes",
+    "loadingButtonEdit": "Saving..."
+  },
+  "ExperiencesTable": {
+    "headerTitle": "Title",
+    "headerLocation": "Location",
+    "headerPrice": "Price",
+    "headerActions": "Actions",
+    "noItemsFound": "No experiences found.",
+    "deleteDialogTitle": "Confirm Deletion",
+    "deleteDialogWarning": "Are you sure you want to permanently delete the experience: \"{title}\"? This action cannot be undone.",
+    "cancelButton": "Cancel",
+    "deleteButton": "Delete"
+  },
+   "Price": {
+    "from": "From",
+    "contactUs": "Contact Us"
+  },
+  "LeaveReviewForm": {
+    "title": "Leave a Review",
+    "nameLabel": "Your Name",
+    "ratingLabel": "Your Rating",
+    "reviewLabel": "Your Review",
+    "submitButton": "Submit Review",
+    "successMessage": "Thank you! Your review has been submitted for approval.",
+    "errorRating": "Please select a star rating.",
+    "errorGeneric": "Something went wrong. Please try again."
+  },
+   "ReviewsList": {
+    "title": "Guest Reviews",
+    "noReviews": "No reviews yet. Be the first to share your experience!"
+  },
+  "BlogPage": {
+    "title": "Our Journal",
+    "subtitle": "Travel guides, stories, and inspiration from the heart of Morocco.",
+    "noArticles": "No articles have been published yet. Please check back soon!",
+    "metaTitle": "Blog | Souss-Massa Tours",
+    "metaDescription": "Read our latest articles and travel guides about exploring the beautiful Souss-Massa region of Morocco."
+  },
+  "BookingForm": {
+    "bookNowButton": "Book This Tour",
+    "dialogTitle": "Request to Book: {experienceTitle}",
+    "dateLabel": "Select a Date",
+    "guestsLabel": "Number of Guests",
+    "nameLabel": "Your Full Name",
+    "emailLabel": "Your Email Address",
+    "cancelButton": "Cancel",
+    "submitButton": "Submit Request",
+    "successMessage": "Thank you! Your booking request has been sent. We will contact you shortly to confirm.",
+    "errorInvalidInput": "Please select a valid date and number of guests.",
+    "errorGeneric": "Something went wrong. Please try again."
+  },
+  "BlogHighlights": {
+    "title": "From Our Journal",
+    "subtitle": "Discover travel tips, cultural stories, and inspiration for your next Moroccan adventure."
+  },
+  "SocialProof": {
+  "title": "As Featured In & Trusted By"
+},
+"Testimonials": {
+    "title": "Hear From Our Travelers",
+    "subtitle": "Discover what our guests have to say about their unforgettable experiences with us."
+  },
+  "Newsletter": {
+    "title": "Join Our Journey",
+    "subtitle": "Subscribe to our newsletter for exclusive travel tips, special offers, and stories from the heart of Morocco.",
+    "emailLabel": "Your Email Address",
+    "submitButton": "Subscribe",
+    "successMessage": "Thank you for subscribing!",
+    "errorGeneric": "Something went wrong. Please try again."
+  }
+
+  
+}

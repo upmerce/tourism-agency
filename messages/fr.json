@@ -1,0 +1,211 @@
+{
+  "Header": {
+    "siteTitle": "Souss-Massa Tours",
+    "experiences": "Expériences",
+    "about": "À Propos",
+    "contact": "Contact",
+    "blogLink": "Blog",
+    "mobileMenuTitle": "Menu",
+    "allExperiences": "Voir Toutes les Expériences",
+    "login": "Connexion"
+  },
+  "HeroSection": {
+    "title": "Découvrez l'Âme du Maroc",
+    "subtitle": "Voyages authentiques à travers les paysages époustouflants et la riche culture de la région de Souss-Massa.",
+    "button": "Explorez Nos Circuits"
+  },
+  "FeaturedExperiences": {
+    "title": "Expériences à la Une",
+    "genericError": "Une erreur est survenue lors du chargement des expériences."
+  },
+  "WhyChooseUs": {
+    "title": "Pourquoi Voyager Avec Nous ?",
+    "feature1_title": "Guides Locaux Experts",
+    "feature1_desc": "Nos guides sont nés et ont grandi au Maroc, vous offrant un aperçu et un accès inégalés à des expériences authentiques.",
+    "feature2_title": "Itinéraires Sur Mesure",
+    "feature2_desc": "Nous ne croyons pas au 'taille unique'. Chaque voyage est conçu autour de vos intérêts, de votre budget et de votre style.",
+    "feature3_title": "Assistance 24/7",
+    "feature3_desc": "Voyagez en toute tranquillité. Notre équipe est disponible 24h/24 pour garantir que votre voyage se déroule sans encombre."
+  },
+ "AboutSection": {
+    "title": "Notre Histoire",
+    "subtitle": "Plus que de simples circuits, nous offrons des connexions authentiques avec le cœur du Maroc.",
+    "paragraph1": "Fondée par des experts locaux passionnés par le partage de la beauté authentique de la région de Souss-Massa, notre mission est de créer des souvenirs de voyage inoubliables. Nous croyons en un tourisme responsable qui soutient les communautés locales et met en valeur la riche culture et les paysages magnifiques de notre chez-nous.",
+    "paragraph2": "Des sommets majestueux de l'Atlas aux sables sereins du Sahara, chaque voyage avec nous est plus qu'des vacances—c'est une aventure tissée de véritables liens humains.",
+    "imageAlt": "Une scène vibrante d'un tajine marocain traditionnel en cours de préparation.",
+    "valuesTitle": "Nos Valeurs Fondamentales",
+    "valuesSubtitle": "Ces principes guident chaque voyage que nous créons, garantissant une expérience authentique, respectueuse et inoubliable.",
+    "value1_title": "Authenticité",
+    "value1_desc": "Nous vous connectons avec des personnes et des lieux réels, offrant un véritable avant-goût de la vie marocaine au-delà des sentiers touristiques habituels.",
+    "value2_title": "Respect",
+    "value2_desc": "Nos circuits sont conçus pour honorer les traditions locales, soutenir les communautés et préserver l'environnement délicat que nous explorons.",
+    "value3_title": "Passion",
+    "value3_desc": "Nous aimons ce que nous faisons. Notre passion pour la culture et les paysages du Maroc est l'ingrédient magique de chaque voyage que nous planifions.",
+    "ctaTitle": "Prêt à Commencer Votre Aventure ?",
+    "ctaButton": "Contactez-Nous pour Planifier Votre Voyage",
+   
+    "teamTitle": "Rencontrez Nos Guides Experts",
+    "teamSubtitle": "Notre équipe est notre plus grand atout. Ce sont des experts locaux, des conteurs et votre lien personnel avec le cœur authentique du Maroc.",
+    "team1_name": "Hassan Al-Fassi",
+    "team1_title": "Guide de Montagne Principal",
+    "team1_bio": "Né dans les montagnes de l'Atlas, Hassan guide des randonnées depuis plus de 15 ans. Sa connaissance des sentiers locaux et de la culture berbère est inégalée.",
+    "team2_name": "Fatima Zahra",
+    "team2_title": "Experte Culturelle & Culinaire",
+    "team2_bio": "Fatima partage sa passion pour la cuisine et l'histoire marocaines, animant nos visites de villes et nos cours de cuisine avec chaleur et expertise.",
+    "team3_name": "Youssef Adnani",
+    "team3_title": "Spécialiste du Désert du Sahara",
+    "team3_bio": "Issu d'une famille nomade, Youssef connaît le désert comme sa poche. Il dirige nos aventures en 4x4 et nos randonnées à dos de chameau."
+   
+  },
+  "ExperienceCard": {
+    "learnMoreButton": "En Savoir Plus"
+  },
+ "ExperienceDetails": {
+    "inquireButton": "Demande de Réservation",
+    "includedTitle": "Ce qui est Inclus",
+    "notIncludedTitle": "Ce qui n'est pas Inclus",
+    "importantInfoTitle": "Informations Importantes",
+    "itineraryTitle": "Itinéraire Détaillé" 
+  },
+ "ExperienceFilters": {
+    "locationLabel": "Filtrer par Lieu",
+    "allLocations": "Tous les Lieux",
+    "sortLabel": "Trier par",
+    "sortDefault": "Par défaut",
+    "sortPriceAsc": "Prix : Croissant",
+    "sortPriceDesc": "Prix : Décroissant"
+  },
+  "ExperiencesPage": {
+    "title": "Nos Aventures",
+    "subtitle": "Parcourez notre collection complète de circuits organisés et d'expériences authentiques à travers la magnifique région de Souss-Massa.",
+    "noResults": "Aucune expérience ne correspond à votre filtre actuel. Veuillez essayer une autre sélection."
+  },
+  "ContactSection": {
+    "title": "Contactez-Nous",
+    "infoTitle": "Informations de Contact",
+    "infoSubtitle": "Vous avez des questions ou êtes prêt à planifier votre aventure ? Contactez-nous ! Nous sommes là pour vous aider à créer le voyage parfait au Maroc.",
+    "address": "Biougra, Souss-Massa, Maroc",
+    "phone": "+212 123 456 789",
+    "email": "contact@souss-massatours.com",
+    "formNameLabel": "Votre Nom",
+    "formEmailLabel": "Votre E-mail",
+    "formMessageLabel": "Votre Message",
+    "formSubmitButton": "Envoyer le Message",
+    "alertSuccess": "Merci pour votre message ! Nous vous recontacterons sous peu."
+  },
+  "Footer": {
+    "siteTitle": "Souss-Massa Tours",
+    "aboutText": "Création de voyages authentiques et inoubliables au cœur du Maroc. Découvrez la véritable région de Souss-Massa avec des experts locaux.",
+    "linksTitle": "Liens Rapides",
+    "aboutLink": "À Propos",
+    "experiencesLink": "Expériences",
+    "contactLink": "Contactez-Nous",
+    "blogLink": "Blog", 
+    "contactTitle": "Contact",
+    "address": "Biougra, Souss-Massa, Maroc",
+    "phone": "+212 123 456 789",
+    "email": "contact@souss-massatours.com",
+    "socialTitle": "Suivez-Nous",
+    "copyright": "© {year} Souss-Massa Tours. Tous droits réservés."
+  },
+  "LoginForm": {
+    "title": "Connexion Admin",
+    "emailLabel": "Adresse E-mail",
+    "passwordLabel": "Mot de passe",
+    "submitButton": "Se Connecter",
+    "loadingButton": "Connexion en cours...",
+    "error": "Échec de la connexion. Veuillez vérifier vos identifiants."
+  },
+  "LogOutButton": {
+    "buttonText": "Déconnexion",
+    "alertError": "Échec de la déconnexion."
+  },
+  "ExperienceForm": {
+    "createButton": "Ajouter une Expérience",
+    "createDialogTitle": "Créer une Nouvelle Expérience",
+    "editDialogTitle": "Modifier l'Expérience",
+    "titleLabel": "Titre",
+    "descriptionLabel": "Description",
+    "priceLabel": "Prix (ex: 'À partir de 950 MAD')",
+    "locationLabel": "Lieu",
+    "uploadButton": "Charger une Image de Couverture",
+    "uploadButtonOptional": "Charger une Nouvelle Image (Optionnel)",
+    "currentImageUrlLabel": "URL de l'Image Actuelle",
+    "fileSelected": "Fichier sélectionné : {fileName}",
+    "errorMissingImage": "Veuillez sélectionner une image de couverture à charger.",
+    "cancelButton": "Annuler",
+    "submitButtonCreate": "Créer l'Expérience",
+    "loadingButtonCreate": "Chargement {progress}%",
+    "submitButtonEdit": "Enregistrer les Modifications",
+    "loadingButtonEdit": "Enregistrement..."
+  },
+  "ExperiencesTable": {
+    "headerTitle": "Titre",
+    "headerLocation": "Lieu",
+    "headerPrice": "Prix",
+    "headerActions": "Actions",
+    "noItemsFound": "Aucune expérience trouvée.",
+    "deleteDialogTitle": "Confirmer la Suppression",
+    "deleteDialogWarning": "Êtes-vous sûr de vouloir supprimer définitivement l'expérience : « {title} » ? Cette action est irréversible.",
+    "cancelButton": "Annuler",
+    "deleteButton": "Supprimer"
+  },
+  "Price": {
+    "from": "À partir de",
+    "contactUs": "Nous Contacter"
+  },
+  "LeaveReviewForm": {
+    "title": "Laissez un Avis",
+    "nameLabel": "Votre Nom",
+    "ratingLabel": "Votre Note",
+    "reviewLabel": "Votre Avis",
+    "submitButton": "Soumettre l'Avis",
+    "successMessage": "Merci ! Votre avis a été soumis pour approbation.",
+    "errorRating": "Veuillez sélectionner une note en étoiles.",
+    "errorGeneric": "Une erreur s'est produite. Veuillez réessayer."
+  },
+  "ReviewsList": {
+    "title": "Avis des Clients",
+    "noReviews": "Aucun avis pour le moment. Soyez le premier à partager votre expérience !"
+  },
+  "BlogPage": {
+    "title": "Notre Journal",
+    "subtitle": "Guides de voyage, histoires et inspiration du cœur du Maroc.",
+    "noArticles": "Aucun article n'a encore été publié. Veuillez revenir bientôt !",
+    "metaTitle": "Blog | Souss-Massa Tours",
+    "metaDescription": "Lisez nos derniers articles et guides de voyage sur l'exploration de la magnifique région de Souss-Massa au Maroc."
+  },
+  "BookingForm": {
+    "bookNowButton": "Réserver ce Circuit",
+    "dialogTitle": "Demande de Réservation : {experienceTitle}",
+    "dateLabel": "Sélectionnez une Date",
+    "guestsLabel": "Nombre de Personnes",
+    "nameLabel": "Votre Nom Complet",
+    "emailLabel": "Votre Adresse E-mail",
+    "cancelButton": "Annuler",
+    "submitButton": "Envoyer la Demande",
+    "successMessage": "Merci ! Votre demande de réservation a été envoyée. Nous vous contacterons sous peu pour confirmer.",
+    "errorInvalidInput": "Veuillez sélectionner une date et un nombre de personnes valides.",
+    "errorGeneric": "Une erreur s'est produite. Veuillez réessayer."
+  },
+  "BlogHighlights": {
+    "title": "De Notre Journal",
+    "subtitle": "Découvrez des conseils de voyage, des histoires culturelles et de l'inspiration pour votre prochaine aventure marocaine."
+  },
+  "SocialProof": {
+  "title": "Présenté Dans & Approuvé Par"
+},
+"Testimonials": {
+    "title": "Les Mots de Nos Voyageurs",
+    "subtitle": "Découvrez ce que nos clients disent de leurs expériences inoubliables avec nous."
+  },
+  "Newsletter": {
+    "title": "Rejoignez Notre Aventure",
+    "subtitle": "Abonnez-vous à notre newsletter pour des conseils de voyage exclusifs, des offres spéciales et des histoires du cœur du Maroc.",
+    "emailLabel": "Votre Adresse E-mail",
+    "submitButton": "S'abonner",
+    "successMessage": "Merci pour votre abonnement !",
+    "errorGeneric": "Une erreur s'est produite. Veuillez réessayer."
+  }
+
+}
