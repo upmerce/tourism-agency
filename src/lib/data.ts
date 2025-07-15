@@ -125,3 +125,41 @@ export const getFeaturedReviews = cache(async () => {
     return [];
   }
 });
+
+// --- NEW: Function to get ALL reviews for the admin panel ---
+export const getAllAdminReviews = cache(async () => {
+  try {
+    const reviewsSnapshot = await adminDb.collection('reviews').orderBy('createdAt', 'desc').get();
+    return reviewsSnapshot.docs.map(doc => {
+      const data = doc.data();
+      return { 
+        id: doc.id,
+         ...data, 
+         createdAt: data.createdAt.toDate().toISOString() 
+        };
+    });
+  } catch (error) {
+    console.error("Error fetching all reviews for admin:", error);
+    return [];
+  }
+});
+
+// --- NEW: Function to get ALL bookings for the admin panel ---
+export const getAllAdminBookings = cache(async () => {
+  try {
+    const bookingsSnapshot = await adminDb.collection('bookings').orderBy('createdAt', 'desc').get();
+    return bookingsSnapshot.docs.map(doc => {
+      const data = doc.data();
+      return {
+        id: doc.id,
+        ...data,
+        createdAt: data.createdAt.toDate().toISOString(),
+        updatedAt: data.updatedAt ? data.updatedAt.toDate().toISOString() : null,
+        requestedDate: data.requestedDate.toDate().toISOString(),
+      };
+    });
+  } catch (error) {
+    console.error("Error fetching bookings for admin:", error);
+    return [];
+  }
+});

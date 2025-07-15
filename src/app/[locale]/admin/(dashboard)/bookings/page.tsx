@@ -4,9 +4,11 @@
 // -------------------------------------------------------------------------
 import { Box, Typography } from "@mui/material";
 import BookingsTable from "@/components/admin/BookingsTable";
+import { getAllAdminBookings } from "@/lib/data";
+import { Booking } from "@/types/booking";
 
 // This function runs on the server to get all bookings
-async function getBookings() {
+/* async function getBookings() {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/admin/bookings`, {
       cache: 'no-store', // Always fetch fresh data for the admin panel
@@ -19,10 +21,10 @@ async function getBookings() {
     console.error("Error fetching bookings:", error);
     return [];
   }
-}
+} */
 
 export default async function BookingsAdminPage() {
-  const bookings = await getBookings();
+  const bookings = (await getAllAdminBookings()) as Booking[];
 
   return (
     <Box>
