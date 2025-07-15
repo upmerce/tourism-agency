@@ -18,35 +18,16 @@ import Inclusions from '@/components/experience/Inclusions';
 import Itinerary from '@/components/experience/Itinerary';
 import ImageGallery from '../experience/ImageGallery';
 import ResponsiveHeading from '../custom/ResponsiveHeading';
-import { GalleryImage } from '@/types/experience';
+import { Experience } from '@/types/experience';
 
 // This is the full, detailed interface for an experience object
-interface Experience {
-  id: string;
-  title: string;
-  description: string;
-  coverImage: string;
-  galleryImages?: GalleryImage[]; // ✅ **FIX**: Added galleryImages to the interface
-  price: { amount: number; currency: string; prefix: string; };
-  duration: string;
-  locationId: string;
-  translations: {
-    [key: string]: {
-      title: string;
-      description: string;
-      included?: string;
-      notIncluded?: string;
-      importantInfo?: string;
-      itinerary?: string;
-    };
-  };
-}
 
-interface ExperienceDetailsProps {
-  experience: Experience;
-}
 
-export default function ExperienceDetails({ experience }: ExperienceDetailsProps) {
+ /* interface ExperienceDetailsProps {
+  experience: Experience | undefined;
+}  */
+
+export default function ExperienceDetails( {experience}: { experience: Experience }) {
   const locale = useLocale();
   const t = useTranslations('ExperienceDetails');
   

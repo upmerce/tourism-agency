@@ -16,6 +16,7 @@ export interface Article {
   status: 'published' | 'draft';
   coverImage: string;
   createdAt: string; // Serialized as an ISO string
+  updatedAt?: string | null; // Optional, serialized as an ISO string
   translations: {
     en?: ArticleTranslation;
     fr?: ArticleTranslation;

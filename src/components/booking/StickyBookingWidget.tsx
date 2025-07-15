@@ -10,17 +10,10 @@ import BookingForm from './BookingForm'; // We will reuse the form we already bu
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PeopleIcon from '@mui/icons-material/People';
 import LanguageIcon from '@mui/icons-material/Language';
+import { Experience } from '@/types/experience';
 
 interface BookingWidgetProps {
-  experience: {
-    price: {
-      amount: number;
-      currency: string;
-      prefix: string;
-    };
-    duration: string;
-    // Add any other key highlights you might want to show
-  };
+  experience: Experience;
   experienceId: string;
   experienceTitle: string;
 }

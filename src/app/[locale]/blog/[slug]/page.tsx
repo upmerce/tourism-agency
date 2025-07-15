@@ -9,9 +9,10 @@ import { Metadata } from "next";
 import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown'; // <-- 1. IMPORT THE MARKDOWN COMPONENT
 import remarkGfm from 'remark-gfm'; // <-- 2. IMPORT THE GFM PLUGIN
+import { getArticleBySlug } from "@/lib/data";
 
 // This function fetches the data for a single article
-async function getArticle(slug: string) {
+/* async function getArticle(slug: string) {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blog/${slug}`, {
       next: { revalidate: 3600 } // Cache for 1 hour
@@ -25,14 +26,14 @@ async function getArticle(slug: string) {
     console.error("Error fetching article:", error);
     return null;
   }
-}
+} */
 
 // --- DYNAMIC SEO METADATA FUNCTION ---
 type metaParams = Promise<{ slug: string, locale: string }>;
 
 export async function generateMetadata({ params }: { params: metaParams }): Promise<Metadata> {
   const { slug, locale } = await params;
-  const article = await getArticle(slug);
+  const article = await getArticleBySlug(slug);
   
   if (!article) {
     return {
@@ -52,7 +53,7 @@ export async function generateMetadata({ params }: { params: metaParams }): Prom
 type Params = Promise<{ slug: string, locale: string }>;
 export default async function ArticlePage({ params }: { params: Params }) {
   const { slug, locale } = await params;
-  const article = await getArticle(slug);
+  const article = await getArticleBySlug(slug);
 
   if (!article) {
     notFound();

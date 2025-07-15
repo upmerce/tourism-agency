@@ -26,6 +26,7 @@ export interface Experience {
   coverImage: string;
   galleryImages?: GalleryImage[];
   description: string; // The English description
+  duration?: string; // e.g., "3 hours"
   translations: {
     en?: Translation;
     fr?: Translation;

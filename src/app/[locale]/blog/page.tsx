@@ -11,8 +11,9 @@ import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import ResponsiveHeading from "@/components/custom/ResponsiveHeading";
 import { Article } from "@/types/article";
+import { getPublishedArticles } from "@/lib/data";
 
-// This function fetches all published articles
+/* // This function fetches all published articles
 async function getPublishedArticles() {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blog`, {
@@ -25,7 +26,7 @@ async function getPublishedArticles() {
     console.error("Error fetching articles:", error);
     return [];
   }
-}
+} */
 
 // --- SEO METADATA FUNCTION ---
 type Params = Promise<{ locale: string }>;

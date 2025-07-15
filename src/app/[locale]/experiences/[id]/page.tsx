@@ -10,6 +10,8 @@ import ExperienceDetails from "@/components/sections/ExperienceDetails";
 import { Box, Container, Divider } from "@mui/material";
 import ReviewsList from "@/components/reviews/ReviewsList";
 import LeaveReviewForm from "@/components/reviews/LeaveReviewForm";
+import { getExperienceById } from "@/lib/data";
+import { Experience } from "@/types/experience";
 
 async function getClientConfig() {
   return {
@@ -21,7 +23,7 @@ async function getClientConfig() {
   };
 }
 
-async function getExperienceDetails(id: string) {
+/* async function getExperienceDetails(id: string) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/experiences/${id}`, {
     next: { revalidate: 3600 }
   });
@@ -29,18 +31,19 @@ async function getExperienceDetails(id: string) {
     throw new Error('Failed to fetch experience details');
   }
   return res.json();
-}
+} */
+
 type Params = Promise<{ id: string, locale: string }>;
 export default async function ExperienceDetailPage({ params }: { params: Params }) {
   const { id, locale } = await params;
-  const experienceData = (await getExperienceDetails(id)).experience;
+  const experienceData = (await getExperienceById(id)) as Experience | null;
   const clientConfig = await getClientConfig();
   
   const experience = {
     ...experienceData,
-    title: experienceData.translations?.[locale]?.title || experienceData.translations?.en?.title || 'Title Not Available',
-    description: experienceData.translations?.[locale]?.description || experienceData.translations?.en?.description || 'Description Not Available',
-  };
+    title: experienceData?.translations?.[locale]?.title || experienceData?.translations?.en?.title || 'Title Not Available',
+    description: experienceData?.translations?.[locale]?.description || experienceData?.translations?.en?.description || 'Description Not Available',
+  } as Experience;
 
   return (
     <Box sx={{ 
