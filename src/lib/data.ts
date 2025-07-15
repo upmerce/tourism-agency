@@ -6,7 +6,7 @@ import 'server-only'; // This ensures this code only ever runs on the server
 import { cache } from 'react';
 import { adminDb } from '@/lib/firebase-admin';
 import { Article } from '@/types/article';
-import { Experience } from '@/types/experience';
+
 // FOR THE BLOG PAGE:
 
 // We wrap our database call in React's `cache` function.
