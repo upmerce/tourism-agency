@@ -23,7 +23,7 @@ export default function Header() {
   const t = useTranslations('Header');
   const [mobileOpen, setMobileOpen] = useState(false);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobileOrTablet = useMediaQuery(theme.breakpoints.down('md'));
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -90,7 +90,7 @@ export default function Header() {
               </Link>
             </Box>
 
-            {isMobile ? (
+            {isMobileOrTablet ? (
               <IconButton color="inherit" aria-label="open drawer" edge="end" onClick={handleDrawerToggle}>
                 <MenuIcon />
               </IconButton>

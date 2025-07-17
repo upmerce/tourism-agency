@@ -93,20 +93,22 @@
     "formSubmitButton": "Envoyer le Message",
     "alertSuccess": "Merci pour votre message ! Nous vous recontacterons sous peu."
   },
-  "Footer": {
+ "Footer": {
     "siteTitle": "Souss-Massa Tours",
-    "aboutText": "Création de voyages authentiques et inoubliables au cœur du Maroc. Découvrez la véritable région de Souss-Massa avec des experts locaux.",
+    "aboutText": "Créateurs de voyages authentiques et inoubliables au cœur du Maroc. Découvrez la véritable région de Souss-Massa avec nos experts locaux.",
     "linksTitle": "Liens Rapides",
     "aboutLink": "À Propos",
     "experiencesLink": "Expériences",
-    "contactLink": "Contactez-Nous",
-    "blogLink": "Blog", 
+    "contactLink": "Contact",
+    "blogLink": "Blog",
     "contactTitle": "Contact",
     "address": "Biougra, Souss-Massa, Maroc",
     "phone": "+212 123 456 789",
     "email": "contact@souss-massatours.com",
-    "socialTitle": "Suivez-Nous",
-    "copyright": "© {year} Souss-Massa Tours. Tous droits réservés."
+    "socialTitle": "Suivez-nous",
+    "copyright": "© {year} Souss-Massa Tours. Tous droits réservés.",
+    "poweredBy": "Site web par",
+    "agencyName": "Upmerce Solutions"
   },
   "LoginForm": {
     "title": "Connexion Admin",

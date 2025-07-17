@@ -12,6 +12,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 // ✅ This is the correct way to dynamically import a client-only component.
 const InteractiveMap = dynamic(
@@ -27,6 +28,8 @@ export default function Footer() {
 
   // 3. This condition checks if we are on the contact page.
   const showMap = pathname !== '/contact';
+// The URL for your agency website
+  const agencyUrl = "https://upmerce-agency.vercel.app/";
 
   return (
     <Box 
@@ -89,6 +92,35 @@ export default function Footer() {
           <Typography variant="body2">
             {t('copyright', { year: new Date().getFullYear() })}
           </Typography>
+          {/* New "Powered by" section with your logo */}
+          <Box
+            component="a"
+            href={agencyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              textDecoration: 'none',
+              color: 'text.secondary',
+              opacity: 0.7,
+              transition: 'opacity 0.3s',
+              '&:hover': {
+                opacity: 1,
+              }
+            }}
+          >
+            <Typography variant="caption" sx={{ mr: 1 }}>{t('poweredBy')}</Typography>
+            <Image 
+              src="/upmerce.webp" // <-- IMPORTANT: Use the path to your upmerce logo
+              alt="upmerce logo"
+              width={20}
+              height={20}
+            />
+            <Typography variant="caption" sx={{ ml: 1, fontWeight: 'bold' }}>
+              {t('agencyName')}
+            </Typography>
+          </Box>
         </Box>
       </Container>
     </Box>
