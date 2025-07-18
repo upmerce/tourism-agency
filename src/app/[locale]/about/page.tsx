@@ -16,7 +16,6 @@ export default function AboutPage() {
     }}>
       <Header />
       <main className="flex-grow">
-        <p> this is just to check vercel instant update!</p>
         <AboutSection />
       </main>
       <Footer />
