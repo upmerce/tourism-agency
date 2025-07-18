@@ -14,10 +14,10 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTranslations } from 'next-intl';
 import { locations } from '@/lib/locations';
 
-// --- 1. Import tools to check authentication state ---
+// Import auth tools
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '@/lib/firebase';
-import LogOutButton from '../auth/LogOutButton'; // We reuse the logout button
+import LogOutButton from '../auth/LogOutButton';
 
 export default function Header() {
   const t = useTranslations('Header');
@@ -27,47 +27,43 @@ export default function Header() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
-  // --- 2. Get the current user and loading state ---
-  const [user, loading] = useAuthState(auth);
+  const [user, loading, error] = useAuthState(auth);
 
   const handleDrawerToggle = () => { setMobileOpen(!mobileOpen); };
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => { setAnchorEl(event.currentTarget); };
   const handleMenuClose = () => { setAnchorEl(null); };
 
-  // --- UPDATED: Contact is now a standard navigation link ---
   const navLinks = [
     { text: t('about'), href: '/about' },
     { text: t('blogLink'), href: '/blog' },
     { text: t('contact'), href: '/contact' },
   ];
 
-  // --- 3. Update the mobile drawer to be auth-aware ---
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', bgcolor: 'background.default', height: '100%' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>{t('mobileMenuTitle')}</Typography>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'start', bgcolor: 'background.default', height: '100%' }}>
+      <Typography variant="h6" sx={{ my: 2, px: 2 }}>{t('mobileMenuTitle')}</Typography>
       <Divider />
       <List>
         <ListItem disablePadding>
-            <ListItemButton component={Link} href="/experiences" sx={{ textAlign: 'center' }}>
+            <ListItemButton component={Link} href="/experiences" sx={{ textAlign: 'start' }}>
                 <ListItemText primary={t('experiences')} />
             </ListItemButton>
         </ListItem>
         {navLinks.map((link) => (
           <ListItem key={link.text} disablePadding>
-            <ListItemButton component={Link} href={link.href} sx={{ textAlign: 'center' }}>
+            <ListItemButton component={Link} href={link.href} sx={{ textAlign: 'start' }}>
               <ListItemText primary={link.text} />
             </ListItemButton>
           </ListItem>
         ))}
         <Divider sx={{ my: 1 }} />
-        {/* Conditionally show Login or Logout in the mobile drawer */}
         {user ? (
-            <ListItem disablePadding sx={{ display: 'flex', justifyContent: 'center' }}>
+            <ListItem disablePadding sx={{ display: 'flex', justifyContent: 'start', px: 2 }}>
                 <LogOutButton />
             </ListItem>
         ) : (
             <ListItem disablePadding>
-                <ListItemButton component={Link} href="/admin/login" sx={{ textAlign: 'center' }}>
+                <ListItemButton component={Link} href="/admin/login" sx={{ textAlign: 'start' }}>
                     <ListItemText primary={t('login')} sx={{ color: 'primary.main', fontWeight: 'bold' }}/>
                 </ListItemButton>
             </ListItem>
@@ -78,7 +74,9 @@ export default function Header() {
 
   return (
     <>
-      <AppBar position="static" sx={{ bgcolor: 'background.paper', boxShadow: 'none', borderBottom: 1, borderColor: 'divider' }}>
+      {/* --- THIS IS THE KEY FIX --- */}
+      {/* We add `color: 'text.primary'` to the AppBar's sx prop. */}
+      <AppBar position="static" sx={{ bgcolor: 'background.paper', color: 'text.primary', boxShadow: 'none', borderBottom: 1, borderColor: 'divider' }}>
         <Container maxWidth="lg">
           <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', px: '0 !important' }}>
             <Box sx={{ flexGrow: 1 }}>
@@ -95,7 +93,6 @@ export default function Header() {
                 <MenuIcon />
               </IconButton>
             ) : (
-              // --- 4. Update the Desktop view to be auth-aware ---
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <Box onMouseLeave={handleMenuClose}>
                   <Button color="inherit" onMouseEnter={handleMenuOpen} endIcon={<ArrowDropDownIcon />}>
@@ -118,7 +115,6 @@ export default function Header() {
                   </Button>
                 ))}
                 
-                {/* Conditionally render Login or Log Out button */}
                 <Box sx={{ ml: 2 }}>
                   {loading ? (
                     <CircularProgress size={24} />
@@ -137,7 +133,7 @@ export default function Header() {
       </AppBar>
 
       <nav>
-        <Drawer variant="temporary" anchor="right" open={mobileOpen} onClose={handleDrawerToggle} ModalProps={{ keepMounted: true }} sx={{ display: { xs: 'block', sm: 'none' }, '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 }}}>
+        <Drawer variant="temporary" anchor="right" open={mobileOpen} onClose={handleDrawerToggle} ModalProps={{ keepMounted: true }} sx={{ display: { xs: 'block', md: 'none' }, '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 }}}>
           {drawer}
         </Drawer>
       </nav>
