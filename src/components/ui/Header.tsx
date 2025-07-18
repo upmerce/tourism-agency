@@ -9,15 +9,16 @@ import {
 import { Link } from '@/i18n/navigation';
 import MenuIcon from '@mui/icons-material/Menu';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import CloseIcon from '@mui/icons-material/Close';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTranslations } from 'next-intl';
 import { locations } from '@/lib/locations';
 
-// Import auth tools
+// --- 1. Import tools to check authentication state --- 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '@/lib/firebase';
-import LogOutButton from '../auth/LogOutButton';
+import LogOutButton from '../auth/LogOutButton'; // We reuse the logout button 
 
 export default function Header() {
   const t = useTranslations('Header');
@@ -39,15 +40,28 @@ export default function Header() {
     { text: t('contact'), href: '/contact' },
   ];
 
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'start', bgcolor: 'background.default', height: '100%' }}>
-      <Typography variant="h6" sx={{ my: 2, px: 2 }}>{t('mobileMenuTitle')}</Typography>
+ const drawer = (
+    // Remove onClick from this Box to prevent the whole drawer from being a close button
+    <Box sx={{ textAlign: 'start', bgcolor: 'background.default', height: '100%' }}>
+      {/* Add a header Box to align the title and close button */}
+      <Box sx={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        p: 1.5
+      }}>
+        <Typography variant="h6" sx={{ ml: 1 }}>{t('mobileMenuTitle')}</Typography>
+        {/* Add the close button */}
+        <IconButton onClick={handleDrawerToggle}>
+          <CloseIcon />
+        </IconButton>
+      </Box>
       <Divider />
       <List>
         <ListItem disablePadding>
-            <ListItemButton component={Link} href="/experiences" sx={{ textAlign: 'start' }}>
-                <ListItemText primary={t('experiences')} />
-            </ListItemButton>
+          <ListItemButton component={Link} href="/experiences" sx={{ textAlign: 'start' }}>
+            <ListItemText primary={t('experiences')} />
+          </ListItemButton>
         </ListItem>
         {navLinks.map((link) => (
           <ListItem key={link.text} disablePadding>
@@ -58,15 +72,15 @@ export default function Header() {
         ))}
         <Divider sx={{ my: 1 }} />
         {user ? (
-            <ListItem disablePadding sx={{ display: 'flex', justifyContent: 'start', px: 2 }}>
-                <LogOutButton />
-            </ListItem>
+          <ListItem disablePadding sx={{ display: 'flex', justifyContent: 'start', px: 2 }}>
+            <LogOutButton />
+          </ListItem>
         ) : (
-            <ListItem disablePadding>
-                <ListItemButton component={Link} href="/admin/login" sx={{ textAlign: 'start' }}>
-                    <ListItemText primary={t('login')} sx={{ color: 'primary.main', fontWeight: 'bold' }}/>
-                </ListItemButton>
-            </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component={Link} href="/admin/login" sx={{ textAlign: 'start' }}>
+              <ListItemText primary={t('login')} sx={{ color: 'primary.main', fontWeight: 'bold' }} />
+            </ListItemButton>
+          </ListItem>
         )}
       </List>
     </Box>
@@ -74,12 +88,18 @@ export default function Header() {
 
   return (
     <>
-      {/* --- THIS IS THE KEY FIX --- */}
-      {/* We add `color: 'text.primary'` to the AppBar's sx prop. */}
       <AppBar position="static" sx={{ bgcolor: 'background.paper', color: 'text.primary', boxShadow: 'none', borderBottom: 1, borderColor: 'divider' }}>
         <Container maxWidth="lg">
           <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', px: '0 !important' }}>
-            <Box sx={{ flexGrow: 1 }}>
+            
+            {/* --- THIS IS THE KEY CHANGE for Mobile View --- */}
+            {isMobileOrTablet && (
+              <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={handleDrawerToggle}>
+                <MenuIcon />
+              </IconButton>
+            )}
+
+            <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
               <Link href="/" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
                 <Box component="img" src="/favicon.ico" alt={t('siteTitle')} sx={{ height: 40, mr: 2 }} />
                 <Typography variant="h6" component="div" sx={{ fontWeight: 'bold' }}>
@@ -88,11 +108,7 @@ export default function Header() {
               </Link>
             </Box>
 
-            {isMobileOrTablet ? (
-              <IconButton color="inherit" aria-label="open drawer" edge="end" onClick={handleDrawerToggle}>
-                <MenuIcon />
-              </IconButton>
-            ) : (
+            {!isMobileOrTablet && (
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <Box onMouseLeave={handleMenuClose}>
                   <Button color="inherit" onMouseEnter={handleMenuOpen} endIcon={<ArrowDropDownIcon />}>
@@ -133,7 +149,8 @@ export default function Header() {
       </AppBar>
 
       <nav>
-        <Drawer variant="temporary" anchor="right" open={mobileOpen} onClose={handleDrawerToggle} ModalProps={{ keepMounted: true }} sx={{ display: { xs: 'block', md: 'none' }, '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 }}}>
+        {/* --- ANOTHER KEY CHANGE: anchor="left" --- */}
+        <Drawer variant="temporary" anchor="left" open={mobileOpen} onClose={handleDrawerToggle} ModalProps={{ keepMounted: true }} sx={{ display: { xs: 'block', md: 'none' }, '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 }}}>
           {drawer}
         </Drawer>
       </nav>

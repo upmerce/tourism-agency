@@ -29,7 +29,7 @@ export default function Footer() {
   // 3. This condition checks if we are on the contact page.
   const showMap = pathname !== '/contact';
 // The URL for your agency website
-  const agencyUrl = "https://upmerce-agency.vercel.app/";
+  const agencyUrl = "https://www.upmerce.com";
 
   return (
     <Box 
