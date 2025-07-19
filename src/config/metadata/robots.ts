@@ -1,5 +1,6 @@
-import { EMAIL } from "@/lib/config";
+
 import { Robots } from "next/dist/lib/metadata/types/metadata-types";
+import { EMAIL } from "../config";
 
 const baseUrl = process.env.NEXT_PUBLIC_API_URL || '';
 export const ROBOTS: Robots = {

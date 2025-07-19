@@ -7,10 +7,11 @@
 import React from 'react';
 import {Grid, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import { useTranslations } from 'next-intl';
-import { locations } from '@/lib/locations';
+
 
 // The props are updated to handle both location and sort changes
 import type { SelectChangeEvent } from '@mui/material';
+import { locations } from '@/config/locations';
 
 // The props are now correctly typed to match the parent component's handlers.
 interface FilterControlsProps {

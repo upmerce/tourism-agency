@@ -7,8 +7,8 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditExperienceForm from './EditExperienceForm';
 import { useTranslations } from 'next-intl';
-import { locations } from '@/lib/locations';
 import { Experience } from '@/types/experience';
+import { locations } from '@/config/locations';
 
 
 

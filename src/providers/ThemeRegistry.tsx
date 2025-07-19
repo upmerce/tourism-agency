@@ -6,7 +6,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import CssBaseline from '@mui/material/CssBaseline';
 
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { getThemeOptions } from '@/theme'; // <-- IMPORT YOUR THEME OPTIONS
+import { getThemeOptions } from '@/config/theme';
 
 export default function ThemeRegistry({ children }: { children: React.ReactNode }) {
   // Check the user's system preference for dark mode

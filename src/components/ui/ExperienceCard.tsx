@@ -4,8 +4,8 @@
 import React from 'react';
 import { Card, CardContent, CardMedia, Typography, Button, CardActions } from '@mui/material';
 import { useTranslations } from 'next-intl';
-import { locations } from '@/lib/locations'; // <-- Import locations
 import { Link } from '@/i18n/navigation'; // <-- Use the i18n Link
+import { locations } from '@/config/locations';
 
 // Update the props to match our new data structure
 interface ExperienceCardProps {

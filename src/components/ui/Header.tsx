@@ -13,12 +13,13 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTranslations } from 'next-intl';
-import { locations } from '@/lib/locations';
+
 
 // --- 1. Import tools to check authentication state --- 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '@/lib/firebase';
 import LogOutButton from '../auth/LogOutButton'; // We reuse the logout button 
+import { locations } from '@/config/locations';
 
 export default function Header() {
   const t = useTranslations('Header');

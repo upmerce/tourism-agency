@@ -12,10 +12,10 @@ import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { storage } from '@/lib/firebase';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-import { locations } from '@/lib/locations';
 import { useRouter } from 'next/navigation';
 import { useExperienceForm} from '@/hooks/useExperienceForm';
 import { GalleryImage } from '@/types/experience';
+import { locations } from '@/config/locations';
 
 export default function CreateExperience() {
   const router = useRouter();

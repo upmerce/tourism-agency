@@ -1,18 +1,18 @@
-// -------------------------------------------------------------------------
-// 1. NEW FILE: /src/app/api/reviews/summary/[experienceId]/route.ts
-// This API route calculates the average rating and review count for an experience.
-// -------------------------------------------------------------------------
+// /src/app/api/reviews/summary/[experienceId]/route.ts
 import { NextResponse } from 'next/server';
 import { adminDb } from '@/lib/firebase-admin';
 
 export const revalidate = 3600; // Cache for 1 hour
 
+// --- THIS IS THE KEY FIX ---
+// We update the function signature to the modern standard for dynamic routes.
+type Params = Promise<{ experienceId: string }>;
 export async function GET(
   request: Request,
-  { params }: { params: { experienceId: string } }
+  { params }: { params: Params }
 ) {
   try {
-    const { experienceId } = params;
+    const { experienceId } = await params;
     if (!experienceId) {
       return NextResponse.json({ error: 'Experience ID is required' }, { status: 400 });
     }
@@ -37,7 +37,7 @@ export async function GET(
 
     return NextResponse.json({ 
       reviewCount, 
-      averageRating: parseFloat(averageRating.toFixed(2)) // Format to 2 decimal places
+      averageRating: parseFloat(averageRating.toFixed(2))
     }, { status: 200 });
 
   } catch (error) {

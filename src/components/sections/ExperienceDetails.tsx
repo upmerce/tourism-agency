@@ -7,7 +7,6 @@
 import React from 'react';
 import { Grid, Typography, Box, Container, Divider } from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
-import { locations } from '@/lib/locations';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -19,6 +18,7 @@ import Itinerary from '@/components/experience/Itinerary';
 import ImageGallery from '../experience/ImageGallery';
 import ResponsiveHeading from '../custom/ResponsiveHeading';
 import { Experience } from '@/types/experience';
+import { locations } from '@/config/locations';
 
 // This is the full, detailed interface for an experience object
 

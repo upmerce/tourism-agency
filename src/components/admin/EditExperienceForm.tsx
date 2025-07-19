@@ -11,10 +11,10 @@ import {
 import DeleteIcon from '@mui/icons-material/Delete';
 import { storage } from '@/lib/firebase';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-import { locations } from '@/lib/locations';
 import { useRouter } from 'next/navigation';
 import { useExperienceForm} from '@/hooks/useExperienceForm'; // Import the hook and types
 import { Experience, GalleryImage } from '@/types/experience';
+import { locations } from '@/config/locations';
 
 interface EditExperienceFormProps {
   open: boolean;
