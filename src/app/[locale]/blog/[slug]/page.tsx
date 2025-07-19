@@ -51,6 +51,8 @@ export async function generateMetadata({ params }: { params: metaParams }): Prom
     description: article.translations?.[locale]?.content.substring(0, 160) + '...' || article.translations?.fr?.content.substring(0, 160) + '...' ,
     images: [{ src: article.coverImage, alt: article.title }],
     pathname: `/blog/${slug}`,
+    url: process.env.NEXT_PUBLIC_API_URL || "https://upmerce.com", // Ensure you have this environment variable set
+
   });
 }
 

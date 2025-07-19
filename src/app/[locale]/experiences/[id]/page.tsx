@@ -43,6 +43,8 @@ export async function generateMetadata({ params }: { params: ExperienceMetadata 
     description: experience.translations?.[locale]?.description.substring(0, 160) + '...' || experience.translations?.fr?.description.substring(0, 160) + '...' ,
     images: [{ src: experience.coverImage, alt: experience.title }],
     pathname: `/experiences/${id}`,
+    url: process.env.NEXT_PUBLIC_API_URL || "https://upmerce.com", // Ensure you have this environment variable set
+
   });
 }
 

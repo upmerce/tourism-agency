@@ -31,7 +31,7 @@ export const EMAIL: string = "contact@souss-massa-tours.com";
  * The production URL of the website.
  * It's crucial to set the `NEXT_PUBLIC_SITE_URL` environment variable.
  */
-export const SITE_URL: string = process.env.NEXT_PUBLIC_SITE_URL || "https://souss-massa-tours.com";
+// export const SITE_URL: string = process.env.NEXT_PUBLIC_SITE_URL || "https://souss-massa-tours.com";
 
 
 

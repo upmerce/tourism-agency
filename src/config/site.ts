@@ -5,7 +5,7 @@
 export type SiteConfig = {
   name: string;
  // description: string;
-  url: string;
+ // url: string;
   ogImage: string;
   contact: {
     email: string;
@@ -21,7 +21,7 @@ export type SiteConfig = {
 export const siteConfig: SiteConfig = {
   name: "Souss-Massa Tours",
  // description: "Discover authentic, private tours in Agadir, Marrakech, and the Sahara. We offer bespoke experiences, from desert treks to cultural city tours, crafted by local experts.",
-  url: "https://tourism-template-eat4.vercel.app", // Your live Vercel URL
+  //url: "https://tourism-template-eat4.vercel.app", // Your live Vercel URL
   ogImage: "/images/og-image.png", // The path to your social media card image
   contact: {
     email: "contact@souss-massatours.com",

@@ -34,6 +34,8 @@ export async function generateMetadata({
     description: metadata.description,
     images: [metadata.ogImage],
     pathname: metadata.pathname,
+    url: process.env.NEXT_PUBLIC_API_URL || "https://upmerce.com", // Ensure you have this environment variable set
+
   });
 }
   

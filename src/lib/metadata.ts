@@ -2,7 +2,7 @@ import ExtendedMetadata from "@/interfaces/ExtentedMetadata";
 import { ARCHIVES, BOOKMARKS, CATEGORY, FORMAT_DETECTION, ICONS, ITUNES, OTHER } from "@/config/metadata";
 import { AUTHORS } from "@/config/metadata/authors";
 import { APP_LINKS, MEDIA, ROBOTS, VERIFICATION } from "@/config/metadata/robots";
-import { APP_NAME, CREATOR, TWITTER_CREATOR_ID, DEFAULT_LOCALE, GENERATOR, PLATEFORM, PUBLISHER, SITE_URL, TWITTER_SITE_ID } from "../config/config";
+import { APP_NAME, CREATOR, TWITTER_CREATOR_ID, DEFAULT_LOCALE, GENERATOR, PLATEFORM, PUBLISHER, TWITTER_SITE_ID } from "../config/config";
 import { keywords } from "@/config/keywords";
 
 // --- TYPE DEFINITIONS ---
@@ -21,6 +21,7 @@ type MetadataOptions = {
   images: SeoImage[];
   // CHANGE: Renamed from `baseUrl` to `pathname` for clarity, as it represents the path relative to the site's base URL.
   pathname: string;
+  url: string; // Mandatory website URL for the page, used in Open Graph and Twitter metadata.
   locale?: string;
 };
 
@@ -37,15 +38,16 @@ function _generateBaseMetadata({
   title,
   description,
   pathname,
+  url,
   images,
   locale = DEFAULT_LOCALE, // CHANGE: Added a default locale from config for consistency.
 }: MetadataOptions): ExtendedMetadata {
   // CHANGE: Constructs the absolute URL for the current page.
-  const canonicalUrl = new URL(pathname, SITE_URL).toString();
+  const canonicalUrl = new URL(pathname, url).toString();
 
   // CHANGE: Uses `new URL()` for robust path joining and creates full, secure URLs.
   const imageObjects = images.map(({ src, alt }) => {
-    const absoluteSrc = new URL(src, SITE_URL).toString();
+    const absoluteSrc = new URL(src, url).toString();
     return {
       url: absoluteSrc,
       secureUrl: absoluteSrc,
@@ -64,7 +66,7 @@ function _generateBaseMetadata({
     referrer: 'origin-when-cross-origin',
     keywords,
     authors: AUTHORS,
-    manifest: new URL('/manifest.webmanifest', SITE_URL).toString(), // CHANGE: Robust manifest URL
+    manifest: new URL('/manifest.webmanifest', url).toString(), // CHANGE: Robust manifest URL
     category: CATEGORY,
 
     // Social & Rich Previews
