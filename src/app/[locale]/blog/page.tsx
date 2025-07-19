@@ -12,33 +12,31 @@ import { Metadata } from "next";
 import ResponsiveHeading from "@/components/custom/ResponsiveHeading";
 import { Article } from "@/types/article";
 import { getPublishedArticles } from "@/lib/data";
+import { getStaticPageMetadata } from "@/config/static-metadata";
+import { generateStaticPageMetadata } from "@/lib/metadata";
 
-/* // This function fetches all published articles
-async function getPublishedArticles() {
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blog`, {
-      next: { revalidate: 3600 } // Cache for 1 hour
-    });
-    if (!res.ok) return [];
-    const data = await res.json();
-    return data.articles;
-  } catch (error) {
-    console.error("Error fetching articles:", error);
-    return [];
-  }
-} */
 
-// --- SEO METADATA FUNCTION ---
-type Params = Promise<{ locale: string }>;
-export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+
+// --- 2. This is the new, cleaner metadata function ---
+type MetadataParams = Promise<{ locale: 'en' | 'fr' }>;
+
+export async function generateMetadata({ 
+  params,
+}: { 
+  params: MetadataParams 
+}): Promise<Metadata> {
+  // We simply call our helper with the page key and the current locale.
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'BlogPage' });
- 
-  return {
-    title: t('metaTitle'),
-    description: t('metaDescription'),
-  };
+  const metadata = getStaticPageMetadata('blog', locale);
+  
+  return generateStaticPageMetadata({
+    title: metadata.title,
+    description: metadata.description,
+    images: [metadata.ogImage],
+    pathname: metadata.pathname,
+  });
 }
+  
 
 export default async function BlogPage() {
   const articles = await getPublishedArticles();

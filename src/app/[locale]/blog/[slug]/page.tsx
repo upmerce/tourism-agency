@@ -10,6 +10,8 @@ import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown'; // <-- 1. IMPORT THE MARKDOWN COMPONENT
 import remarkGfm from 'remark-gfm'; // <-- 2. IMPORT THE GFM PLUGIN
 import { getArticleBySlug } from "@/lib/data";
+import { generateDynamicPageMetadata } from "@/lib/metadata";
+import { Article } from "@/types/article";
 
 // This function fetches the data for a single article
 /* async function getArticle(slug: string) {
@@ -33,7 +35,7 @@ type metaParams = Promise<{ slug: string, locale: string }>;
 
 export async function generateMetadata({ params }: { params: metaParams }): Promise<Metadata> {
   const { slug, locale } = await params;
-  const article = await getArticleBySlug(slug);
+  const article = (await getArticleBySlug(slug)) as Article | null;
   
   if (!article) {
     return {
@@ -41,13 +43,15 @@ export async function generateMetadata({ params }: { params: metaParams }): Prom
     };
   }
 
-  const translation = article.translations?.[locale] || article.translations?.en;
-  const description = translation?.content?.substring(0, 160) + '...';
+ 
 
-  return {
-    title: `${translation?.title || 'Article'} | Souss-Massa Tours`,
-    description: description,
-  };
+ // Use the fetched data to generate the metadata.
+  return generateDynamicPageMetadata({
+    title: article.title,
+    description: article.translations?.[locale]?.content.substring(0, 160) + '...' || article.translations?.fr?.content.substring(0, 160) + '...' ,
+    images: [{ src: article.coverImage, alt: article.title }],
+    pathname: `/blog/${slug}`,
+  });
 }
 
 type Params = Promise<{ slug: string, locale: string }>;
@@ -65,6 +69,8 @@ export default async function ArticlePage({ params }: { params: Params }) {
     month: 'long',
     day: 'numeric',
   });
+
+  
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: 'background.default' }}>

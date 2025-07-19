@@ -16,6 +16,30 @@ import { useExperiences } from '@/hooks/useExperiences';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import MainHeading from '@/components/custom/MainHeading';
 import { Experience } from '@/types/experience';
+import { Metadata } from 'next';
+import { getStaticPageMetadata } from '@/config/static-metadata';
+import { generateStaticPageMetadata } from '@/lib/metadata';
+
+// --- 2. This is the new, cleaner metadata function ---
+type MetadataParams = Promise<{ locale: 'en' | 'fr' }>;
+
+export async function generateMetadata({ 
+  params,
+}: { 
+  params: MetadataParams 
+}): Promise<Metadata> {
+  // We simply call our helper with the page key and the current locale.
+  const { locale } = await params;
+  const metadata = getStaticPageMetadata('experiences', locale);
+  
+  return generateStaticPageMetadata({
+    title: metadata.title,
+    description: metadata.description,
+    images: [metadata.ogImage],
+    pathname: metadata.pathname,
+  });
+}
+  
 
 export default function ExperiencesPage() {
   const t = useTranslations('ExperiencesPage');

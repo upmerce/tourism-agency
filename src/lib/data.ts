@@ -163,3 +163,37 @@ export const getAllAdminBookings = cache(async () => {
     return [];
   }
 });
+// --- NEW FUNCTION to get review summary for a specific experience ---
+export const getReviewSummary = cache(async (experienceId: string) => {
+  try {
+    if (!experienceId) {
+      return { reviewCount: 0, averageRating: 0 };
+    }
+
+    const reviewsSnapshot = await adminDb
+      .collection('reviews')
+      .where('experienceId', '==', experienceId)
+      .where('isApproved', '==', true)
+      .get();
+
+    if (reviewsSnapshot.empty) {
+      return { reviewCount: 0, averageRating: 0 };
+    }
+
+    let totalRating = 0;
+    reviewsSnapshot.forEach(doc => {
+      totalRating += doc.data().rating;
+    });
+
+    const reviewCount = reviewsSnapshot.size;
+    const averageRating = totalRating / reviewCount;
+
+    return { 
+      reviewCount, 
+      averageRating: parseFloat(averageRating.toFixed(2))
+    };
+  } catch (error) {
+    console.error("Error fetching review summary:", error);
+    return { reviewCount: 0, averageRating: 0 }; // Return a default value on error
+  }
+});

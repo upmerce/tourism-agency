@@ -10,8 +10,10 @@ import ExperienceDetails from "@/components/sections/ExperienceDetails";
 import { Box, Container, Divider } from "@mui/material";
 import ReviewsList from "@/components/reviews/ReviewsList";
 import LeaveReviewForm from "@/components/reviews/LeaveReviewForm";
-import { getExperienceById } from "@/lib/data";
+import { getExperienceById, getReviewSummary } from "@/lib/data";
 import { Experience } from "@/types/experience";
+import { Metadata } from "next";
+import { generateDynamicPageMetadata } from "@/lib/metadata";
 
 async function getClientConfig() {
   return {
@@ -23,15 +25,26 @@ async function getClientConfig() {
   };
 }
 
-/* async function getExperienceDetails(id: string) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/experiences/${id}`, {
-    next: { revalidate: 3600 }
+// --- UPGRADED METADATA FUNCTION ---
+type ExperienceMetadata = Promise<{
+  id: string;
+  locale: string;
+}>;
+export async function generateMetadata({ params }: { params: ExperienceMetadata }): Promise<Metadata> {
+  const {id, locale} = await params;
+  const experience = (await getExperienceById(id)) as Experience | null;
+  if (!experience) { return { title: 'Experience Not Found' }; }
+
+
+
+// Use the fetched data to generate the metadata.
+  return generateDynamicPageMetadata({
+    title: experience.translations?.[locale]?.title || experience.translations?.fr?.title || 'Experience Not Available',
+    description: experience.translations?.[locale]?.description.substring(0, 160) + '...' || experience.translations?.fr?.description.substring(0, 160) + '...' ,
+    images: [{ src: experience.coverImage, alt: experience.title }],
+    pathname: `/experiences/${id}`,
   });
-  if (!res.ok) {
-    throw new Error('Failed to fetch experience details');
-  }
-  return res.json();
-} */
+}
 
 type Params = Promise<{ id: string, locale: string }>;
 export default async function ExperienceDetailPage({ params }: { params: Params }) {
@@ -44,9 +57,39 @@ export default async function ExperienceDetailPage({ params }: { params: Params 
     title: experienceData?.translations?.[locale]?.title || experienceData?.translations?.en?.title || 'Title Not Available',
     description: experienceData?.translations?.[locale]?.description || experienceData?.translations?.en?.description || 'Description Not Available',
   } as Experience;
+  const reviewSummary = await getReviewSummary(id);
+  const translation = experience.translations?.[locale] || experience.translations?.en;
+ // const siteUrl = process.env.NEXT_PUBLIC_API_URL || '';
 
+  // --- JSON-LD STRUCTURED DATA ---
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TouristTrip',
+    name: translation?.title,
+    description: translation?.description?.substring(0, 5000), // Max length for description
+    image: experience.coverImage,
+    offers: {
+      '@type': 'Offer',
+      price: experience.price.amount,
+      priceCurrency: experience.price.currency,
+      availability: 'https://schema.org/InStock',
+    },
+    ...(reviewSummary.reviewCount > 0 && {
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: reviewSummary.averageRating,
+        reviewCount: reviewSummary.reviewCount,
+      },
+    }),
+  };
   return (
-    <Box sx={{ 
+    <>
+       <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main>
+         <Box sx={{ 
       display: 'flex', 
       flexDirection: 'column', 
       minHeight: '100vh', 
@@ -71,5 +114,7 @@ export default async function ExperienceDetailPage({ params }: { params: Params 
       </main>
       <Footer />
     </Box>
+      </main>
+    </>
   );
 }
