@@ -1,1 +1,1 @@
-squoosh ----> image compress webp.
+squoosh ----> image compress webp;
