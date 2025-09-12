@@ -28,9 +28,11 @@ export default function CreateArticleForm() {
   const [formData, setFormData] = useState({
     slug: '',
     status: 'draft' as 'draft' | 'published',
+    author: 'Upmerce Adventure', // Added author with a default value
+
     translations: {
-      en: { title: '', content: '' },
-      fr: { title: '', content: '' }
+      en: { title: '', description: '', content: '' },
+      fr: { title: '', description: '', content: '' }
     }
   });
 
@@ -39,19 +41,22 @@ export default function CreateArticleForm() {
   const [error, setError] = useState<string | null>(null);
   const [currentTab, setCurrentTab] = useState<'en' | 'fr'>('en'); // To manage which language tab is active
 
-  // --- 2. UPDATED HANDLERS for the new data structure ---
-  const handleTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newTitle = event.target.value;
-    // Update the title for the current language tab
+  // --- EDIT 2: CONSOLIDATE CHANGE HANDLERS ---
+  // This single handler is cleaner and manages all translatable fields.
+  const handleTranslatableChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target; // name = 'title', 'description', or 'content'
+    
+    // Update the correct field for the current language tab
     const newTranslations = {
       ...formData.translations,
-      [currentTab]: { ...formData.translations[currentTab], title: newTitle }
+      [currentTab]: { ...formData.translations[currentTab], [name]: value }
     };
-    setFormData(prev => ({ ...prev, translations: newTranslations }));
-
-    // Auto-generate slug only when editing the English title for consistency
-    if (currentTab === 'en') {
-      setFormData(prev => ({ ...prev, slug: generateSlug(newTitle) }));
+    
+    // Auto-generate slug only when editing the English title
+    if (name === 'title' && currentTab === 'en') {
+        setFormData(prev => ({ ...prev, translations: newTranslations, slug: generateSlug(value) }));
+    } else {
+        setFormData(prev => ({ ...prev, translations: newTranslations }));
     }
   };
 
@@ -78,8 +83,8 @@ export default function CreateArticleForm() {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (!imageFile || !formData.translations.en.title || !formData.slug) {
-      setError("English Title, Slug, and a Cover Image are required.");
+    if (!imageFile || !formData.translations.en.title || !formData.slug|| !formData.author || !formData.translations.en.description) {
+      setError("English Title, Description, Author, Slug, and a Cover Image are required.");
       return;
     }
     setLoading(true);
@@ -126,6 +131,14 @@ export default function CreateArticleForm() {
         fullWidth
         helperText="Auto-generated from English title. Can be edited."
       />
+      {/* --- EDIT 3: ADD THE AUTHOR FIELD --- */}
+      <TextField
+        required
+        label="Author"
+        value={formData.author}
+        onChange={(e) => setFormData(prev => ({...prev, author: e.target.value}))}
+        fullWidth
+      />
       <FormControl fullWidth>
         <InputLabel id="status-select-label">Status</InputLabel>
         <Select
@@ -154,10 +167,23 @@ export default function CreateArticleForm() {
       <Box sx={{ pt: 2, display: 'flex', flexDirection: 'column', gap: 3 }}>
         <TextField
           required={currentTab === 'en'} // English title is required
+          name="title" // Add name attribute
           label="Article Title"
           value={formData.translations[currentTab].title}
-          onChange={handleTitleChange}
+          onChange={handleTranslatableChange}
           fullWidth
+        />
+               {/* --- EDIT 4: ADD THE DESCRIPTION FIELD --- */}
+        <TextField
+          required={currentTab === 'en'}
+          name="description" // Add name attribute
+          label="SEO Description"
+          value={formData.translations[currentTab].description}
+          onChange={handleTranslatableChange} // Use new handler
+          fullWidth
+          multiline
+          rows={3}
+          helperText="A short summary for search engines and article previews."
         />
         <TextField
           required={currentTab === 'en'} // English content is required

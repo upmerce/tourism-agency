@@ -1,1 +1,2 @@
 squoosh ----> image compress webp;
+project structure : [Get-ChildItem -Recurse -File | Where-Object { $_.FullName -notmatch '\\node_modules\\|\\.next\\|\\out\\' } | Select-Object -ExpandProperty FullName > project-structure.txt]

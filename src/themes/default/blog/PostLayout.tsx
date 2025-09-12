@@ -2,7 +2,7 @@
 'use client';
 
 import React from 'react';
-import { Box, Typography, Container } from "@mui/material";
+import { Box, Typography, Container, useTheme } from "@mui/material";
 import { Article, ArticleTranslation } from "@/types/article";
 import Image from "next/image";
 import ReactMarkdown from 'react-markdown';
@@ -15,7 +15,12 @@ export interface PostLayoutProps {
 }
 
 export default function PostLayout({ article, translation }: PostLayoutProps) {
+    const theme = useTheme();
     const formattedDate = article.createdAt ? format(new Date(article.createdAt), 'MMMM d, yyyy') : '';
+
+    if (!translation) {
+      return <Box>Article not found in this language.</Box>;
+    }
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', bgcolor: 'background.default' }}>
@@ -23,7 +28,7 @@ export default function PostLayout({ article, translation }: PostLayoutProps) {
                 <Container maxWidth="md" sx={{ py: { xs: 4, md: 8 } }}>
                     <article>
                         <Typography variant="h2" component="h1" sx={{ fontWeight: 'bold', mb: 2 }}>
-                            {translation?.title}
+                            {translation.title}
                         </Typography>
                         <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
                             Published by {article.author} on {formattedDate}
@@ -39,16 +44,71 @@ export default function PostLayout({ article, translation }: PostLayoutProps) {
                         }}>
                             <Image
                                 src={article.coverImage}
-                                alt={translation?.title ||'cover image'}
+                                alt={translation.title}
                                 fill
                                 style={{ objectFit: 'cover' }}
                                 priority
                                 sizes="(max-width: 768px) 100vw, 768px"
                             />
                         </Box>
-                        <Box sx={{ lineHeight: 1.8, fontSize: '1.1rem' }}>
+                        
+                        {/* This Box now contains all the styles for the Markdown content */}
+                        <Box sx={{
+                            fontFamily: 'Georgia, serif',
+                            fontSize: { xs: '1rem', md: '1.1rem' },
+                            lineHeight: 1.8,
+                            color: 'text.primary',
+
+                            '& h2, & h3, & h4': {
+                                fontFamily: theme.typography.fontFamily,
+                                fontWeight: 'bold',
+                                lineHeight: 1.3,
+                                mt: 5,
+                                mb: 2,
+                            },
+                            '& h2': { fontSize: '1.75rem' },
+                            '& h3': { fontSize: '1.5rem' },
+                            
+                            '& blockquote': {
+                                borderLeft: `3px solid ${theme.palette.text.primary}`,
+                                pl: 2,
+                                my: 4,
+                                fontStyle: 'italic',
+                                color: 'text.secondary',
+                            },
+
+                            '& a': {
+                                color: 'primary.main',
+                                textDecoration: 'underline',
+                                '&:hover': {
+                                    textDecoration: 'none',
+                                }
+                            },
+
+                            '& img': {
+                                maxWidth: '100%',
+                                height: 'auto',
+                                borderRadius: 1,
+                                my: 4,
+                            },
+
+                            '& table': {
+                                width: '100%',
+                                borderCollapse: 'collapse',
+                                my: 4,
+                            },
+                            '& th, & td': {
+                                border: `1px solid ${theme.palette.divider}`,
+                                p: 1.5,
+                                textAlign: 'left',
+                            },
+                            '& th': {
+                                fontWeight: 'bold',
+                                bgcolor: 'action.hover',
+                            },
+                        }}>
                             <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                                {translation?.content}
+                                {translation.content}
                             </ReactMarkdown>
                         </Box>
                     </article>
