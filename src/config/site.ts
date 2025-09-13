@@ -22,7 +22,9 @@ export const LOCATIONS = [
   { id: 'legzira', name: 'Legzira Beach' },
   { id: 'marrakech', name: 'Marrakech' },
   { id: 'tafraout', name: 'Tafraout' },
-  { id: 'taroudant', name: 'Taroudant' }
+  { id: 'taroudant', name: 'Taroudant' },
+  { id: 'fes', name: 'Fes' },
+  { id: 'zagora', name: 'Zagora' },
 ];
 
    // Theme & Visuals

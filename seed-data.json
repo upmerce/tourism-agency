@@ -1,175 +1,164 @@
 [
   {
-    "price": { "amount": 400, "currency": "MAD", "prefix": "from" },
-    "locationId": "essaouira",
+    "price": { "amount": 2100, "currency": "MAD", "prefix": "from" },
+    "locationId": "marrakech",
     "isFeatured": true,
+    "tags": ["Luxury", "Romantic", "Bucket List"],
+    "status": "published",
+    "galleryImages": [],
+    "coverImage": "https://images.unsplash.com/photo-1528755699793-2d9354911736?q=80&w=2070&auto-format&fit=crop",
     "translations": {
       "en": {
-        "title": "Essaouira: The Windy City of Art",
-        "description": "Explore the charming coastal city of Essaouira. Walk along its historic ramparts, discover the vibrant art scene in the medina, and enjoy the fresh sea breeze at the bustling fishing port.",
-        "included": "Transport from Agadir\nLocal Guide\nMint Tea",
-        "notIncluded": "Lunch\nGratuities",
-        "importantInfo": "**Duration:** Full Day\n**Best for:** Culture, History, Photography",
-        "itinerary": "Day 1: Coastal Drive & Medina Exploration\nWe'll pick you up from your hotel and enjoy a scenic drive along the Atlantic coast to Essaouira. Upon arrival, we'll explore the historic medina, a UNESCO World Heritage site, visit the Skala de la Ville ramparts, and browse the local art galleries and wood-carving workshops."
+        "title": "Marrakech Sunrise Hot Air Balloon & Berber Breakfast",
+        "description": "Experience the magic of a lifetime as you soar above the Moroccan landscape at sunrise in a private hot air balloon. Witness breathtaking views of the Atlas Mountains, followed by a traditional Berber breakfast.",
+        "included": "* Private hotel transfer in a 4x4\n* Approx. 1-hour hot air balloon flight\n* Traditional Berber breakfast in a caidal tent\n* A flight certificate",
+        "notIncluded": "* Gratuities for the pilot and crew",
+        "importantInfo": "This experience is weather-dependent. Flights are confirmed the evening before based on the forecast. Early morning pickup (around 5:00 AM) is required.",
+        "itinerary": "Your day begins before dawn with a private 4x4 pickup from your hotel. We'll drive to the launch site where you'll watch the impressive inflation of the balloon. As the sun begins to rise, you'll gently lift off, floating peacefully over villages and palm groves with the High Atlas Mountains as your backdrop. After landing, you'll be treated to a delicious, freshly prepared Berber breakfast."
       },
       "fr": {
-        "title": "Essaouira : La Cité Venteuse des Arts",
-        "description": "Explorez la charmante ville côtière d'Essaouira. Promenez-vous le long de ses remparts historiques, découvrez la scène artistique vibrante de la médina et profitez de la brise marine au port de pêche animé.",
-        "included": "Transport depuis Agadir\nGuide Local\nThé à la menthe",
-        "notIncluded": "Déjeuner\nPourboires",
-        "importantInfo": "**Durée :** Journée complète\n**Idéal pour :** Culture, Histoire, Photographie",
-        "itinerary": "Jour 1 : Route côtière et exploration de la médina\nNous viendrons vous chercher à votre hôtel pour un trajet panoramique le long de la côte atlantique jusqu'à Essaouira. À l'arrivée, nous explorerons la médina historique, site classé au patrimoine mondial de l'UNESCO, visiterons les remparts de la Skala de la Ville et parcourrons les galeries d'art locales et les ateliers de sculpture sur bois."
+        "title": "Vol en Montgolfière au Lever du Soleil à Marrakech & Petit-déjeuner Berbère",
+        "description": "Vivez la magie d'une vie en vous élevant au-dessus du paysage marocain au lever du soleil dans une montgolfière privée. Admirez des vues à couper le souffle sur les montagnes de l'Atlas, suivies d'un petit-déjeuner berbère traditionnel.",
+        "included": "* Transfert privé depuis l'hôtel en 4x4\n* Vol en montgolfière d'environ 1 heure\n* Petit-déjeuner berbère traditionnel sous une tente caïdale\n* Un certificat de vol",
+        "notIncluded": "* Pourboires pour le pilote et l'équipage",
+        "importantInfo": "Cette expérience dépend des conditions météorologiques. Les vols sont confirmés la veille au soir en fonction des prévisions. Une prise en charge tôt le matin (vers 5h00) est nécessaire.",
+        "itinerary": "Votre journée commence avant l'aube avec une prise en charge en 4x4 privé à votre hôtel. Nous nous rendrons au site de lancement où vous assisterez à l'impressionnant gonflage du ballon. Alors que le soleil se lève, vous décollerez doucement, flottant paisiblement au-dessus des villages et des palmeraies avec le Haut Atlas en toile de fond. Après l'atterrissage, vous dégusterez un délicieux petit-déjeuner berbère fraîchement préparé."
       }
-    },
-    "coverImage": "https://images.pexels.com/photos/1831313/pexels-photo-1831313.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "galleryImages": []
+    }
   },
   {
-    "price": { "amount": 2500, "currency": "MAD", "prefix": "from" },
-    "locationId": "marrakech",
+    "price": { "amount": 950, "currency": "MAD", "prefix": "from" },
+    "locationId": "agadir",
     "isFeatured": true,
+    "tags": ["Adventure", "Watersports", "4x4"],
+    "status": "published",
+    "galleryImages": [],
+    "coverImage": "https://images.unsplash.com/photo-1620243486968-2323a2f3a2c2?q=80&w=1974&auto-format&fit=crop",
     "translations": {
       "en": {
-        "title": "Luxury Agafay Desert Sunset & Dinner",
-        "description": "An unforgettable evening in the Agafay stone desert. Enjoy a camel ride at sunset followed by a gourmet dinner under the stars in a luxurious desert camp.",
-        "included": "Private 4x4 Transfer\nCamel Ride\nGourmet 3-course dinner\nLive traditional music",
-        "notIncluded": "Alcoholic beverages\nTips",
-        "importantInfo": "**Experience:** Evening\n**Vibe:** Romantic, Luxury",
-        "itinerary": "Evening: Desert Journey\nYour private driver will pick you up from your Marrakech hotel in the afternoon for a journey into the Agafay Desert. Upon arrival at our luxury camp, you will embark on a guided camel ride to a high dune to witness a spectacular sunset over the stone desert. After sunset, return to the camp for a gourmet three-course Moroccan dinner, accompanied by live traditional music under the stars."
+        "title": "Agadir Coastal Thrills: Jet Ski & Quad Biking Combo",
+        "description": "The ultimate adventure combo! Feel the adrenaline with a thrilling jet ski session on the Atlantic, followed by an exciting quad bike ride through the coastal sand dunes and Berber villages.",
+        "included": "* Hotel pickup and drop-off\n* 30-minute Jet Ski session\n* 2-hour guided Quad Biking tour\n* All necessary equipment and safety briefing",
+        "notIncluded": "* Food and drinks\n* Goggles and gloves (available for rent)",
+        "importantInfo": "No prior experience is necessary for either activity. Minimum age for driving is 16. The total duration of the experience including transfers is approximately 4-5 hours.",
+        "itinerary": "This action-packed half-day starts with a pickup from your hotel in Agadir. First, you'll head to the beach for a full safety briefing before you take to the waves on a powerful jet ski. After your session, we'll drive to the nearby dunes where your quad bike awaits. Follow your guide on an exciting off-road journey through sand, argan forests, and traditional villages, with a stop for mint tea along the way."
       },
       "fr": {
-        "title": "Coucher de Soleil et Dîner de Luxe dans le Désert d'Agafay",
-        "description": "Une soirée inoubliable dans le désert de pierre d'Agafay. Profitez d'une balade à dos de chameau au coucher du soleil, suivie d'un dîner gastronomique sous les étoiles dans un camp de luxe.",
-        "included": "Transfert privé en 4x4\nBalade à dos de chameau\nDîner gastronomique 3 services\nMusique traditionnelle en direct",
-        "notIncluded": "Boissons alcoolisées\nPourboires",
-        "importantInfo": "**Expérience :** Soirée\n**Ambiance :** Romantique, Luxe",
-        "itinerary": "Soirée : Voyage dans le désert\nVotre chauffeur privé viendra vous chercher à votre hôtel de Marrakech dans l'après-midi pour un voyage dans le désert d'Agafay. À votre arrivée à notre camp de luxe, vous embarquerez pour une balade guidée à dos de chameau jusqu'à une haute dune pour assister à un coucher de soleil spectaculaire sur le désert de pierre. Après le coucher du soleil, retour au camp pour un dîner marocain gastronomique à trois plats, accompagné de musique traditionnelle en direct sous les étoiles."
+        "title": "Sensations Fortes sur la Côte d'Agadir : Combo Jet Ski & Quad",
+        "description": "Le combo d'aventure ultime ! Ressentez l'adrénaline avec une session de jet ski exaltante sur l'Atlantique, suivie d'une balade passionnante en quad à travers les dunes de sable côtières et les villages berbères.",
+        "included": "* Prise en charge et retour à l'hôtel\n* Session de Jet Ski de 30 minutes\n* Tour guidé en Quad de 2 heures\n* Tout l'équipement nécessaire et briefing de sécurité",
+        "notIncluded": "* Repas et boissons\n* Lunettes et gants (disponibles à la location)",
+        "importantInfo": "Aucune expérience préalable n'est nécessaire pour l'une ou l'autre activité. L'âge minimum pour conduire est de 16 ans. La durée totale de l'expérience, transferts compris, est d'environ 4-5 heures.",
+        "itinerary": "Cette demi-journée pleine d'action commence par une prise en charge à votre hôtel d'Agadir. D'abord, vous vous dirigerez vers la plage pour un briefing de sécurité complet avant de prendre les vagues sur un jet ski puissant. Après votre session, nous nous rendrons aux dunes voisines où votre quad vous attend. Suivez votre guide pour un voyage hors route passionnant à travers le sable, les forêts d'arganiers et les villages traditionnels, avec un arrêt pour le thé à la menthe en chemin."
       }
-    },
-    "coverImage": "https://images.pexels.com/photos/13687063/pexels-photo-13687063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "galleryImages": []
+    }
   },
   {
-    "price": { "amount": 450, "currency": "MAD", "prefix": "from" },
-    "locationId": "agadir",
-    "isFeatured": true,
+    "price": { "amount": 550, "currency": "MAD", "prefix": "from" },
+    "locationId": "fes",
+    "isFeatured": false,
+    "tags": ["Culinary", "Cultural", "Walking Tour"],
+    "status": "published",
+    "galleryImages": [],
+    "coverImage": "https://images.unsplash.com/photo-1628430342391-99419385d54b?q=80&w=2070&auto-format&fit=crop",
     "translations": {
-      "en": { 
-        "title": "Taghazout Bay Surf Lesson", 
-        "description": "Ride the famous waves of Taghazout, a world-renowned surf spot. This two-hour lesson with a professional instructor is perfect for beginners and intermediates alike.",
-        "itinerary": "Session Plan: Your lesson begins with a safety briefing and basic techniques on the sand. You will then spend over an hour in the water with your instructor, learning to catch waves and stand up on the board. All equipment (board and wetsuit) is provided."
+      "en": {
+        "title": "Flavors of Fes: A Guided Medina Food Tour",
+        "description": "Taste your way through the ancient heart of Morocco's culinary capital. This guided walking tour takes you deep into the Fes medina to sample authentic street food, visit a traditional community oven, and taste local honey and cheeses.",
+        "included": "* Expert local food guide\n* 5-7 different food and drink tastings\n* Visit to a honey souk and community bakery\n* A traditional main dish for lunch",
+        "notIncluded": "* Additional food or drinks\n* Gratuities for the guide",
+        "importantInfo": "This is a walking tour of approximately 3-4 hours. Please come hungry! We can accommodate most dietary restrictions with advance notice.",
+        "itinerary": "Our tour begins in the bustling heart of the Fes medina. We'll navigate the labyrinthine alleys, stopping to taste a variety of local specialties like Harira soup, savory pastries, and fresh olives. We'll visit a centuries-old *ferrane* (community oven) to see how locals bake their bread, and taste different types of wild honey at the honey souk. The tour culminates with a delicious, traditional lunch at a hidden local eatery."
       },
-      "fr": { 
-        "title": "Leçon de Surf à la Baie de Taghazout", 
-        "description": "Surfez sur les vagues célèbres de Taghazout, un spot de surf de renommée mondiale. Cette leçon de deux heures avec un instructeur professionnel est parfaite pour les débutants et les intermédiaires.",
-        "itinerary": "Plan de la session : Votre leçon commence par un briefing sur la sécurité et les techniques de base sur le sable. Vous passerez ensuite plus d'une heure dans l'eau avec votre instructeur, apprenant à attraper les vagues et à vous tenir debout sur la planche. Tout l'équipement (planche et combinaison) est fourni."
+      "fr": {
+        "title": "Saveurs de Fès : Visite Gastronomique Guidée de la Médina",
+        "description": "Dégustez votre chemin à travers le cœur ancien de la capitale culinaire du Maroc. Cette visite guidée à pied vous emmène au plus profond de la médina de Fès pour goûter à la cuisine de rue authentique, visiter un four communautaire traditionnel et déguster du miel et des fromages locaux.",
+        "included": "* Guide gastronomique local expert\n* 5 à 7 dégustations de plats et de boissons différentes\n* Visite d'un souk au miel et d'une boulangerie communautaire\n* Un plat principal traditionnel pour le déjeuner",
+        "notIncluded": "* Nourriture ou boissons supplémentaires\n* Pourboires pour le guide",
+        "importantInfo": "Ceci est une visite à pied d'environ 3-4 heures. Venez le ventre vide ! Nous pouvons accommoder la plupart des restrictions alimentaires si nous sommes prévenus à l'avance.",
+        "itinerary": "Notre visite commence au cœur animé de la médina de Fès. Nous naviguerons dans les ruelles labyrinthiques, nous arrêtant pour déguster une variété de spécialités locales comme la soupe Harira, les pâtisseries salées et les olives fraîches. Nous visiterons un *ferrane* (four communautaire) séculaire pour voir comment les habitants cuisent leur pain, et dégusterons différents types de miel sauvage au souk au miel. La visite se termine par un délicieux déjeuner traditionnel dans un restaurant local caché."
       }
-    },
-    "coverImage": "https://images.pexels.com/photos/1654210/pexels-photo-1654210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "galleryImages": []
-  },
-  {
-    "price": { "amount": 700, "currency": "MAD", "prefix": "from" },
-    "locationId": "marrakech",
-    "isFeatured": false,
-    "translations": {
-      "en": { 
-        "title": "Day Trip to Ait Benhaddou Kasbah", 
-        "description": "Journey to the UNESCO World Heritage site of Ait Benhaddou, a fortified ksar featured in films like Gladiator and Game of Thrones. Explore its ancient alleys and breathtaking views.",
-        "itinerary": "Day Trip: We depart Marrakech early, crossing the spectacular Tizi n'Tichka pass in the High Atlas mountains. We will arrive at Ait Benhaddou for a guided tour of the ancient ksar. After lunch at a local restaurant with panoramic views, we will begin our return journey to Marrakech."
-      },
-      "fr": { 
-        "title": "Excursion d'une Journée à la Kasbah d'Ait Benhaddou", 
-        "description": "Voyagez vers le site du patrimoine mondial de l'UNESCO d'Ait Benhaddou, un ksar fortifié vu dans des films comme Gladiator et Game of Thrones. Explorez ses ruelles anciennes et ses vues imprenables.",
-        "itinerary": "Excursion d'une journée : Nous quittons Marrakech tôt le matin, en traversant le spectaculaire col de Tizi n'Tichka dans les montagnes du Haut Atlas. Nous arriverons à Ait Benhaddou pour une visite guidée de l'ancien ksar. Après le déjeuner dans un restaurant local avec vue panoramique, nous entamerons notre voyage de retour vers Marrakech."
-      }
-    },
-    "coverImage": "https://images.pexels.com/photos/2432221/pexels-photo-2432221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "galleryImages": []
-  },
-  {
-    "price": { "amount": 800, "currency": "MAD", "prefix": "from" },
-    "locationId": "taroudant",
-    "isFeatured": true,
-    "translations": {
-      "en": { 
-        "title": "Palm Grove Oasis & Kasbah Tour", 
-        "description": "Escape to a lush oasis filled with thousands of palm trees. Discover ancient kasbahs hidden within the greenery and learn about the traditional irrigation systems that sustain life here.",
-        "itinerary": "Full Day Tour: Your day begins with a visit to the historic city walls of Taroudant. We then venture into a nearby palm grove oasis, where we will take a leisurely walk to explore the traditional 'khettara' irrigation channels and visit a restored kasbah for mint tea."
-      },
-      "fr": { 
-        "title": "Tour de l'Oasis de la Palmeraie & Kasbahs", 
-        "description": "Évadez-vous dans une oasis luxuriante abritant des milliers de palmiers. Découvrez d'anciennes kasbahs cachées dans la verdure et apprenez-en plus sur les systèmes d'irrigation traditionnels.",
-        "itinerary": "Excursion d'une journée complète : Votre journée commence par une visite des remparts historiques de Taroudant. Nous nous aventurons ensuite dans une oasis de palmiers voisine, où nous ferons une promenade tranquille pour explorer les canaux d'irrigation traditionnels 'khettara' et visiter une kasbah restaurée pour un thé à la menthe."
-      }
-    },
-    "coverImage": "https://images.pexels.com/photos/3889929/pexels-photo-3889929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "galleryImages": []
-  },
-  {
-    "price": { "amount": 350, "currency": "MAD", "prefix": "from" },
-    "locationId": "marrakech",
-    "isFeatured": true,
-    "translations": {
-      "en": { "title": "Evening Souk & Djemaa el-Fna Food Tour", "description": "Immerse yourself in the magic of Marrakech's main square at night. Navigate the bustling souks with a guide and sample a variety of delicious street foods from the famous food stalls." },
-      "fr": { "title": "Soirée Souk & Tour Gastronomique à Djemaa el-Fna", "description": "Plongez dans la magie de la place principale de Marrakech la nuit. Naviguez dans les souks animés avec un guide et dégustez une variété de délicieux plats de rue des célèbres stands de nourriture." }
-    },
-    "coverImage": "https://images.pexels.com/photos/3889742/pexels-photo-3889742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "galleryImages": []
-  },
-  {
-    "price": { "amount": 300, "currency": "MAD", "prefix": "from" },
-    "locationId": "agadir",
-    "isFeatured": false,
-    "translations": {
-      "en": { "title": "Visit an Argan Oil Cooperative", "description": "Discover the secret of Morocco's liquid gold. Visit a women-led cooperative to see the traditional process of extracting argan oil, and sample authentic culinary and cosmetic products." },
-      "fr": { "title": "Visite d'une Coopérative d'Huile d'Argan", "description": "Découvrez le secret de l'or liquide du Maroc. Visitez une coopérative dirigée par des femmes pour voir le processus traditionnel d'extraction de l'huile d'argan et déguster des produits culinaires et cosmétiques authentiques." }
-    },
-    "coverImage": "https://images.pexels.com/photos/8696495/pexels-photo-8696495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "galleryImages": []
-  },
-  {
-    "price": { "amount": 750, "currency": "MAD", "prefix": "from" },
-    "locationId": "agadir",
-    "isFeatured": true,
-    "translations": {
-      "en": { "title": "Traditional Moroccan Hammam & Massage", "description": "Indulge in a centuries-old wellness ritual. Experience a traditional hammam steam bath and black soap exfoliation, followed by a relaxing argan oil massage to rejuvenate your body and soul." },
-      "fr": { "title": "Rituel Hammam Marocain Traditionnel & Massage", "description": "Offrez-vous un rituel de bien-être séculaire. Découvrez un bain de vapeur hammam traditionnel et une exfoliation au savon noir, suivis d'un massage relaxant à l'huile d'argan pour rajeunir votre corps et votre esprit." }
-    },
-    "coverImage": "https://images.pexels.com/photos/7262995/pexels-photo-7262995.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "galleryImages": []
-  },
-  {
-    "price": { "amount": 450, "currency": "MAD", "prefix": "from" },
-    "locationId": "tafraout",
-    "isFeatured": false,
-    "translations": {
-      "en": { "title": "Tafraout's Painted Rocks Adventure", "description": "A surreal journey into the Anti-Atlas mountains to witness the famous painted rocks. Explore this unique open-air art installation by Belgian artist Jean Verame set against a stunning granite landscape." },
-      "fr": { "title": "Aventure des Rochers Peints de Tafraout", "description": "Un voyage surréaliste dans les montagnes de l'Anti-Atlas pour admirer les célèbres rochers peints. Explorez cette installation artistique unique en plein air de l'artiste belge Jean Verame sur fond d'un paysage de granit époustouflant." }
-    },
-    "coverImage": "https://images.pexels.com/photos/1590137/pexels-photo-1590137.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "galleryImages": []
-  },
-  {
-    "price": { "amount": 250, "currency": "MAD", "prefix": "from" },
-    "locationId": "agadir",
-    "isFeatured": false,
-    "translations": {
-      "en": { "title": "Agadir's Bustling Port & Fish Market Tour", "description": "Experience the vibrant, authentic atmosphere of one of Morocco's largest fishing ports. See the daily catch come in, watch the lively fish auction, and enjoy the freshest grilled fish for lunch." },
-      "fr": { "title": "Visite du Port Animé & Marché aux Poissons d'Agadir", "description": "Découvrez l'atmosphère vibrante et authentique de l'un des plus grands ports de pêche du Maroc. Observez l'arrivée de la prise du jour, assistez à la criée animée et dégustez le poisson grillé le plus frais pour le déjeuner." }
-    },
-    "coverImage": "https://images.pexels.com/photos/1633530/pexels-photo-1633530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "galleryImages": []
+    }
   },
   {
     "price": { "amount": 1800, "currency": "MAD", "prefix": "from" },
+    "locationId": "imlil",
+    "isFeatured": false,
+    "tags": ["Trekking", "Adventure", "Mountains"],
+    "status": "published",
+    "galleryImages": [],
+    "coverImage": "https://images.unsplash.com/photo-1593318343111-a7041a8c42a2?q=80&w=2071&auto-format&fit=crop",
+    "translations": {
+      "en": {
+        "title": "Climb Mount Toubkal: 2-Day High Atlas Trek",
+        "description": "Summit the highest peak in North Africa on this challenging but rewarding 2-day trek. Journey from the vibrant Imlil Valley to the Toubkal refuge, summiting at sunrise for breathtaking panoramic views.",
+        "included": "* Certified mountain guide\n* Mules for luggage transport\n* 1 night accommodation at the Toubkal refuge\n* All meals during the trek",
+        "notIncluded": "* Transport to/from Imlil\n* Personal trekking gear (sleeping bag, etc.)\n* Water and snacks",
+        "importantInfo": "This is a strenuous high-altitude trek requiring a good level of physical fitness. The trail is rocky and steep in places. Proper hiking boots are mandatory.",
+        "itinerary": "### Day 1: Imlil to Toubkal Refuge\nYour trek starts in the village of Imlil. We'll ascend through the beautiful Mizane Valley, passing the shrine of Sidi Chamharouch before arriving at the Toubkal Refuge (3207m) for dinner and an overnight stay.\n\n### Day 2: Summit Day & Return to Imlil\nWe begin our ascent before dawn, aiming to reach the summit of Mount Toubkal (4167m) for a spectacular sunrise. After celebrating our achievement, we descend back to the refuge for a meal before hiking down to Imlil, where our trek concludes."
+      },
+      "fr": {
+        "title": "Ascension du Mont Toubkal : Trek de 2 Jours dans le Haut Atlas",
+        "description": "Atteignez le plus haut sommet d'Afrique du Nord lors de ce trek exigeant mais gratifiant de 2 jours. Voyagez de la vibrante vallée d'Imlil au refuge du Toubkal, avec une ascension au lever du soleil pour des vues panoramiques à couper le souffle.",
+        "included": "* Guide de montagne certifié\n* Mules pour le transport des bagages\n* 1 nuit d'hébergement au refuge du Toubkal\n* Tous les repas pendant le trek",
+        "notIncluded": "* Transport vers/depuis Imlil\n* Équipement de trekking personnel (sac de couchage, etc.)\n* Eau et collations",
+        "importantInfo": "Ceci est un trek intense en haute altitude nécessitant un bon niveau de forme physique. Le sentier est rocheux et escarpé par endroits. Des chaussures de randonnée appropriées sont obligatoires.",
+        "itinerary": "### Jour 1 : D'Imlil au Refuge du Toubkal\nVotre trek commence dans le village d'Imlil. Nous monterons à travers la magnifique vallée de Mizane, en passant par le sanctuaire de Sidi Chamharouch avant d'arriver au Refuge du Toubkal (3207m) pour le dîner et la nuit.\n\n### Jour 2 : Jour du Sommet & Retour à Imlil\nNous commençons notre ascension avant l'aube, visant à atteindre le sommet du Mont Toubkal (4167m) pour un lever de soleil spectaculaire. Après avoir célébré notre accomplissement, nous redescendrons au refuge pour un repas avant de redescendre à Imlil, où notre trek se termine."
+      }
+    }
+  },
+  {
+    "price": { "amount": 1200, "currency": "MAD", "prefix": "from" },
     "locationId": "marrakech",
     "isFeatured": true,
+    "tags": ["Wellness", "Luxury", "Spa"],
+    "status": "published",
+    "galleryImages": [],
+    "coverImage": "https://images.unsplash.com/photo-1596707328659-c292723c4a22?q=80&w=2070&auto-format&fit=crop",
     "translations": {
-      "en": { "title": "Majorelle Garden & YSL Museum Visit", "description": "A half-day tour to explore the iconic Jardin Majorelle with its vibrant blue colors, and the sophisticated Yves Saint Laurent Museum dedicated to the legendary fashion designer." },
-      "fr": { "title": "Visite du Jardin Majorelle & Musée YSL", "description": "Une demi-journée pour explorer l'emblématique Jardin Majorelle avec ses couleurs bleues vibrantes, et le sophistiqué Musée Yves Saint Laurent dédié au légendaire créateur de mode." }
-    },
-    "coverImage": "https://images.pexels.com/photos/1603653/pexels-photo-1603653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "galleryImages": []
+      "en": {
+        "title": "Royal Hammam & Argan Oil Massage: A Luxury Spa Day",
+        "description": "Indulge in the ultimate Moroccan wellness ritual. This private experience in a luxury spa includes a traditional black soap exfoliation in a steamy hammam, followed by a deeply relaxing full-body massage with pure argan oil.",
+        "included": "* Private access to the hammam and relaxation room\n* Full-body exfoliation with kessa glove and black soap\n* Rhassoul clay body mask\n* 60-minute relaxing argan oil massage",
+        "notIncluded": "* Beauty treatments (facials, etc.)\n* Gratuities",
+        "importantInfo": "This is a private 2.5-hour spa experience. Please arrive 15 minutes early to relax and enjoy your welcome tea.",
+        "itinerary": "Your journey to relaxation begins the moment you enter our serene spa. You'll be guided to your private hammam, where the ritual starts with a steam session and a cleansing with traditional black soap. This is followed by a vigorous full-body exfoliation to purify the skin. A nourishing rhassoul clay mask is then applied. After a refreshing shower, your experience concludes with a one-hour, full-body massage using warm, pure argan oil, leaving you completely rejuvenated."
+      },
+      "fr": {
+        "title": "Hammam Royal & Massage à l'Huile d'Argan : Une Journée Spa de Luxe",
+        "description": "Offrez-vous le rituel de bien-être marocain ultime. Cette expérience privée dans un spa de luxe comprend une exfoliation traditionnelle au savon noir dans un hammam à vapeur, suivie d'un massage corporel profondément relaxant à l'huile d'argan pure.",
+        "included": "* Accès privé au hammam et à la salle de relaxation\n* Gommage corporel complet avec gant de kessa et savon noir\n* Masque corporel à l'argile Rhassoul\n* Massage relaxant d'une heure à l'huile d'argan",
+        "notIncluded": "* Soins de beauté (soins du visage, etc.)\n* Pourboires",
+        "importantInfo": "Ceci est une expérience spa privée de 2,5 heures. Veuillez arriver 15 minutes en avance pour vous détendre et savourer votre thé de bienvenue.",
+        "itinerary": "Votre voyage vers la relaxation commence dès votre entrée dans notre spa serein. Vous serez guidé vers votre hammam privé, où le rituel débute par une séance de vapeur et un nettoyage au savon noir traditionnel. S'ensuit un gommage corporel complet et vigoureux pour purifier la peau. Un masque nourrissant à l'argile rhassoul est ensuite appliqué. Après une douche rafraîchissante, votre expérience se termine par un massage complet du corps d'une heure à l'huile d'argan pure et chaude, vous laissant complètement ressourcé."
+      }
+    }
+  },
+  {
+    "price": { "amount": 3500, "currency": "MAD", "prefix": "from" },
+    "locationId": "zagora",
+    "isFeatured": true,
+    "tags": ["Sahara", "4x4", "Off-Road"],
+    "status": "published",
+    "galleryImages": [],
+    "coverImage": "https://images.unsplash.com/photo-1598144679773-a82abebb3744?q=80&w=1968&auto-format&fit=crop",
+    "translations": {
+      "en": {
+        "title": "Wild Sahara: 2-Day 4x4 Expedition to Erg Chigaga",
+        "description": "Go beyond the usual tourist trail on this thrilling 2-day 4x4 expedition to the wild, remote dunes of Erg Chigaga. This is the authentic, off-road Sahara experience for true adventurers.",
+        "included": "* Private 4x4 with expert driver\n* 1 night in a remote desert camp at Erg Chigaga\n* Dinner and breakfast in the desert\n* Camel trek at sunset",
+        "notIncluded": "* Lunches\n* Drinks and snacks",
+        "importantInfo": "This tour requires a significant amount of off-road driving and is more rustic than a Merzouga tour. It is designed for those seeking a true sense of remote adventure.",
+        "itinerary": "### Day 1: Zagora to Erg Chigaga\nYour adventure begins in Zagora as we head off-road into the true Sahara. The journey takes you across vast, rocky plains (*hamada*) before the first sand dunes appear. We'll arrive at our remote camp at the foot of the great Erg Chigaga dunes in the afternoon for a sunset camel trek.\n\n### Day 2: Return Journey via the Salt Flats\nAfter a desert sunrise, we begin our return journey via a different route, crossing the vast, dried salt lake of Iriqui and passing by fossil fields before rejoining the paved road and heading back to Zagora."
+      },
+      "fr": {
+        "title": "Sahara Sauvage : Expédition 4x4 de 2 Jours à Erg Chigaga",
+        "description": "Sortez des sentiers battus lors de cette expédition 4x4 palpitante de 2 jours vers les dunes sauvages et reculées d'Erg Chigaga. C'est l'expérience saharienne authentique et hors-piste pour les vrais aventuriers.",
+        "included": "* 4x4 privé avec chauffeur expert\n* 1 nuit dans un campement isolé à Erg Chigaga\n* Dîner et petit-déjeuner dans le désert\n* Randonnée à dos de dromadaire au coucher du soleil",
+        "notIncluded": "* Déjeuners\n* Boissons et collations",
+        "importantInfo": "Ce circuit nécessite une quantité importante de conduite hors route et est plus rustique qu'un tour à Merzouga. Il est conçu pour ceux qui recherchent un véritable sentiment d'aventure isolée.",
+        "itinerary": "### Jour 1 : De Zagora à Erg Chigaga\nVotre aventure commence à Zagora alors que nous nous engageons hors des sentiers battus dans le vrai Sahara. Le voyage vous emmène à travers de vastes plaines rocheuses (*hamada*) avant que les premières dunes de sable n'apparaissent. Nous arriverons à notre campement isolé au pied des grandes dunes de l'Erg Chigaga dans l'après-midi pour une randonnée à dos de dromadaire au coucher du soleil.\n\n### Jour 2 : Retour par les Lacs Salés Asséchés\nAprès un lever de soleil dans le désert, nous entamons notre voyage de retour par un itinéraire différent, traversant le vaste lac salé asséché d'Iriqui et passant par des champs de fossiles avant de rejoindre la route goudronnée et de rentrer à Zagora."
+      }
+    }
   }
 ]
