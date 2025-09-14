@@ -42,4 +42,8 @@ next-env.d.ts
 serviceAccountKey.json
 # utils
 /utils/tools/
-
+# Seed scripts and data
+seed-articles.json
+seed-articles.mjs
+seed-data.json
+seed.mjs

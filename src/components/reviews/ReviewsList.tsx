@@ -42,7 +42,7 @@ export default function ReviewsList({ experienceId }: ReviewsListProps) {
       {isError && (
         <Alert severity="error">{error.message}</Alert>
       )}
-
+      
       {reviews && reviews.length === 0 && (
         <Typography sx={{ color: 'text.secondary', fontStyle: 'italic' }}>
           {t('noReviews')}
