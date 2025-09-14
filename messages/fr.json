@@ -157,8 +157,11 @@
     "deleteButton": "Supprimer"
   },
   "Price": {
-    "from": "À partir de",
-    "contactUs": "Nous Contacter"
+     "from": "À partir de",
+    "per person": "par personne",
+    "contactUs": "Nous Contacter",
+    "per night": "par nuit",
+    "per half-day": "par demi-journée" 
   },
   "LeaveReviewForm": {
     "title": "Laissez un Avis",

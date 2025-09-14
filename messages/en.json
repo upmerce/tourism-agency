@@ -157,7 +157,10 @@
   },
    "Price": {
     "from": "From",
-    "contactUs": "Contact Us"
+    "per person": "per person",
+    "contactUs": "Contact Us",
+    "per night": "per night",
+    "per half-day": "per half-day" 
   },
   "LeaveReviewForm": {
     "title": "Leave a Review",
