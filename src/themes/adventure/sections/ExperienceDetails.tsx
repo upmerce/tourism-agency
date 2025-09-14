@@ -2,7 +2,7 @@
 'use client';
 
 import React from 'react';
-import { Grid, Typography, Box, Container, Divider, Paper } from '@mui/material';
+import { Grid, Typography, Box, Container, Divider} from '@mui/material';
 import { useLocale, useTranslations } from 'next-intl';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 //import ReactMarkdown from 'react-markdown';
@@ -12,7 +12,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import Inclusions from '@/components/experience/Inclusions';
 import Itinerary from '@/components/experience/Itinerary';
 import ImageGallery from '@/components/experience/ImageGallery';
-import BookingForm from '@/components/booking/BookingForm'; // Import BookingForm directly
+// import BookingForm from '@/components/booking/BookingForm'; // Import BookingForm directly
 import { Experience } from '@/types/experience';
 import { locations } from '@/config/locations';
 import ReactMarkdown from 'react-markdown';

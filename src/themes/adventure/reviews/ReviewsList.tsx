@@ -1,6 +1,6 @@
 'use client';
 
-import React, { use } from 'react';
+import React from 'react';
 import { Box, Typography } from '@mui/material';
 import ReviewsList from '@/components/reviews/ReviewsList'; // Re-use the core logic
 import { useTranslations } from 'next-intl';

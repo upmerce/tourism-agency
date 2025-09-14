@@ -67,7 +67,7 @@ export default function AdminLayout({
         clearTimeout(timerId);
       }
     };
-  }, [user, loading, router]);
+  }, [user, loading, router, t]);
 
   // Show a full-screen loading spinner while checking auth state.
   if (loading || isVerifying) {
