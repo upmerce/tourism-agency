@@ -57,7 +57,7 @@ export function getStaticPageMetadata(
     ? `${siteConfig.siteName} | ${content.title}` 
     : `${content.title} | ${siteConfig.siteName}`;
 
-  // --- KEY CHANGE: Use dynamic OG image for the homepage ---
+  // --- KEY CHANGE: Use dynamic OG image for the homepage ----
   // If the page is 'homepage', use the theme-specific image from siteConfig.
   // Otherwise, use the static image defined in metadataStore for that page.
   const finalOgImage = pageKey === 'homepage' && siteConfig.ogImage
