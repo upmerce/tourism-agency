@@ -72,6 +72,10 @@ export type SiteConfig = {
     cardStyle: CardStyle;
     
   };
+  ogImage?: { 
+    src: string; // Path to the default OG image
+    alt: string; // Alt text for the OG image
+  };
 };
 
 // --- CONFIGURATION FOR YOUR FIRST CLIENT (YOUR BROTHER) ---

@@ -12,4 +12,8 @@ export const defaultConfig: Partial<SiteConfig> = {
     font: 'lora',
     cardStyle: 'immersive',
   },
+   ogImage: { 
+    src: "/images/og/og-default-theme.webp", // Use the adventure image we created
+    alt: "Authentic Morocco Adventures-Default Theme"
+  } 
 };

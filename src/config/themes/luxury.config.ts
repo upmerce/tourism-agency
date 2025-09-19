@@ -12,4 +12,8 @@ export const luxuryConfig: Partial<SiteConfig> = {
     font: 'oranienbaum-luxury',
     cardStyle: 'classic', 
   },
+   ogImage: { 
+    src: "/images/og/og-luxury-theme.webp", // Use the adventure image we created
+    alt: "Serene Atlas Escapes"
+  } 
 };
