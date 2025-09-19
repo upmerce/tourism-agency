@@ -40,8 +40,7 @@ export async function generateMetadata({
  
   
   return generateStaticPageMetadata({
-   // title: metadata.title,
-    title: 'Success is your destination - Ouazza Mustapha',
+    title: metadata.title,
     description: metadata.description,
     images: [metadata.ogImage],
     pathname: metadata.pathname,

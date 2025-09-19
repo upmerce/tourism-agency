@@ -22,9 +22,7 @@ export const LOCATIONS = [
   { id: 'legzira', name: 'Legzira Beach' },
   { id: 'marrakech', name: 'Marrakech' },
   { id: 'tafraout', name: 'Tafraout' },
-  { id: 'taroudant', name: 'Taroudant' },
-  { id: 'fes', name: 'Fes' },
-  { id: 'zagora', name: 'Zagora' },
+  { id: 'taroudant', name: 'Taroudant' }
 ];
 
    // Theme & Visuals
@@ -72,9 +70,9 @@ export type SiteConfig = {
     cardStyle: CardStyle;
     
   };
-  ogImage?: { 
-    src: string; // Path to the default OG image
-    alt: string; // Alt text for the OG image
+  ogImage?: {
+    src: string; // Should be a relative path from the /public folder
+    alt: string;
   };
 };
 
