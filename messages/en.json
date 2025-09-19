@@ -157,10 +157,7 @@
   },
    "Price": {
     "from": "From",
-    "per person": "per person",
-    "contactUs": "Contact Us",
-    "per night": "per night",
-    "per half-day": "per half-day" 
+    "contactUs": "Contact Us"
   },
   "LeaveReviewForm": {
     "title": "Leave a Review",
@@ -279,16 +276,10 @@
     "sortPriceDesc": "Price: High to Low"
   },
   "AgencyHero": {
-    "title": "Your Adventure Awaits",
-    "subtitle": "We build high-performance, action-ready websites for Morocco's leading tour operators, excursion providers, and adventure guides.",
-    "ctaButton": "Discover Our Method"
-  },
-  "AdminLayout": {
-    "loadingMessage": "Checking authentication...",
-    "unauthenticatedMessage": "This page is for administrators only. You will be redirected shortly.",
-    "loginButton": "Go to Login",
-    "accessDenied": "Access Denied"
-  }
+  "title": "Your Adventure Awaits",
+  "subtitle": "Surf the Atlantic coast, trek the Atlas Mountains, or explore the Sahara desert. We offer authentic, expertly-guided excursions for every thrill-seeker.",
+  "ctaButton": "Explore Our Adventures"
+}
 
   
 }

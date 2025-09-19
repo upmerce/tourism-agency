@@ -157,11 +157,8 @@
     "deleteButton": "Supprimer"
   },
   "Price": {
-     "from": "À partir de",
-    "per person": "par personne",
-    "contactUs": "Nous Contacter",
-    "per night": "par nuit",
-    "per half-day": "par demi-journée" 
+    "from": "À partir de",
+    "contactUs": "Nous Contacter"
   },
   "LeaveReviewForm": {
     "title": "Laissez un Avis",
@@ -280,15 +277,9 @@
     "sortPriceDesc": "Prix : Décroissant"
   },
     "AgencyHero": {
-    "title": "Votre Aventure Commence Ici",
-    "subtitle": "Nous créons des sites web haute performance, prêts pour l'action, pour les meilleurs tours-opérateurs, agences d'excursion et guides d'aventure au Maroc.",
-    "ctaButton": "Découvrir Notre Méthode"
-  },
-  "AdminLayout": {
-    "loadingMessage": "Vérification de l'authentification...",
-    "unauthenticatedMessage": "Cette page est réservée aux administrateurs. Vous allez être redirigé.",
-    "loginButton": "Aller à la Connexion",
-    "accessDenied": "Accès Refusé"
-  }
+  "title": "Votre Aventure Vous Attend",
+  "subtitle": "Surfez sur la côte Atlantique, randonnez dans les montagnes de l'Atlas ou explorez le désert du Sahara. Nous proposons des excursions authentiques, guidées par des experts, pour tous les amateurs de sensations fortes.",
+  "ctaButton": "Découvrez Nos Aventures"
+}
 
 }
